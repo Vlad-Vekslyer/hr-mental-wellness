@@ -32,7 +32,7 @@ get_header();
       <p>-Maurine K</p>
     </div>
     <div class="quote">
-      <p>I felt so wonderful to help and get help from other members of the group through sharing my experiences and what has helped me. Attending the group meeting made me committed to do that"</p>
+      <p>"I felt so wonderful to help and get help from other members of the group through sharing my experiences and what has helped me. Attending the group meeting made me committed to do that"</p>
       <p>-Rebecca J</p>
     </div>
     <div class="quote">
