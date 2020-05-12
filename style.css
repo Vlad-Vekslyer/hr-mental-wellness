@@ -79,7 +79,7 @@ body { color: #656565; }
 
 /* Top and Bottom Widget Wrappers */
 .widget-wrapper { display: flex; justify-content: center; }
-.widget-wrapper > div { width: 360px; margin: 0 10%; }
+.widget-wrapper > div { width: 360px; margin: 0 15px; }
 
 /* Top Page Hero */
 .hero {
