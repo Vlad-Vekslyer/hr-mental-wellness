@@ -60,6 +60,7 @@ get_header();
           <p>“I highly recommend this book for anyone seeking life purpose, meaning, and self-transcendence”</p>
           <p>-Samir Abdel, MD</p>
         </div>
+        <button class="btn"><a href="#">Read More</a></button>
       </div>
   </div>
 </section>

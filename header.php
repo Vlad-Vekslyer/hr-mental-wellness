@@ -211,6 +211,7 @@ wp_reset_postdata(); ?>
 	<img width="100%" src=<?= esc_attr(get_theme_mod('flourish_lite_child_hero_image')) ?>>
 	<div>
 		<?php
+		
 			$desc = apply_filters('get_hero_desc', $_SERVER['REQUEST_URI']);
 			if(is_array($desc)){
 				$top = $desc['top'];

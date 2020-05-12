@@ -25,7 +25,7 @@ class Link_Modal extends WP_Widget {
         echo "<img src=$img_link>";
         echo "<h4>$header</h4>";
         echo "<p>$body</p>";
-        echo "<button><a href=$link>Read More</a></button>";
+        echo "<button class='btn'><a href=$link>Read More</a></button>";
         echo $args['after_widget'];
     }
 

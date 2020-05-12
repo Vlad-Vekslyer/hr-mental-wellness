@@ -68,15 +68,7 @@ body { color: #656565; }
 .modal-link h4, .modal-link p { width: 70%; left: 50%; transform: translateX(-50%); }
 .modal-link h4{ top: 40px; color: #4F95E1; text-transform: uppercase; }
 .modal-link p { top: 80px; color: #c0c0c0; }
-.modal-link button {
-	bottom: 20px;
-	padding: 10px 30px;
-	background-color: var(--blue-dark);
-	border: none;
-	font-size: 1em;
-	text-transform: uppercase;
-	left: 15%;
-}
+.modal-link button { bottom: 20px; left: 15%; }
 .modal-link a { color: white; }
 .modal-link img {
 	position: relative;
@@ -118,12 +110,30 @@ body { color: #656565; }
 .quote p:first-of-type { font-size: 1.1em; margin-bottom: 10px;}
 .quote p:last-of-type { font-style: italic; }
 
+/* Buttons */
+.btn {
+	background-color: var(--blue-dark);
+	border: none;
+	font-size: 1em;
+	text-transform: uppercase;
+	box-sizing: border-box;
+}
+.btn a {
+	color: white;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	padding: 10px 30px;
+}
+.btn a:hover { color: white; }
+
 /* Homepage book section */
 #book { padding: 50px 0; background-color: #f6f6f6; }
 #book .container { display: flex; justify-content: space-around; }
 #book h1 { text-align: center; }
 #book img { margin-right: 20px; }
 #book-desc { display: flex; flex-direction: column; justify-content: space-around; width: 35%; }
+#book-desc .btn { width: 50%; }
 
 /* Homepage testimonials section */
 #testimonials {
