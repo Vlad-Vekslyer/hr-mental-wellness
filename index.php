@@ -46,22 +46,27 @@ get_header();
   </div>
 </section>
 
-<section id="book">
-  <h1>The Book</h1>
-  <div class="container">
-      <img src=<?php echo get_theme_file_uri( 'assets/book.png' ) ?>>
-      <div id="book-desc">
-        <p>
-          This book presents a program to help you build a foundation for your healing.
-          With a focus on how to achieve optimal mental wellness—to heal from depression, anxiety and addictions.
-          Learn how to discover your talents and gifts, and put yourself on the path to self-actualization to become the very best you.
-        </p>
-        <div class="quote">
-          <p>“I highly recommend this book for anyone seeking life purpose, meaning, and self-transcendence”</p>
-          <p>-Samir Abdel, MD</p>
+<section id="book-bio">
+  <div id="book">
+    <h1>The Book</h1>
+    <div>
+        <div id="book-desc">
+          <p>
+            This book presents a program to help you build a foundation for your healing.
+            With a focus on how to achieve optimal mental wellness—to heal from depression, anxiety and addictions.
+            Learn how to discover your talents and gifts, and put yourself on the path to self-actualization to become the very best you.
+          </p>
+          <div class="quote">
+            <p>“I highly recommend this book for anyone seeking life purpose, meaning, and self-transcendence”</p>
+            <p>-Samir Abdel, MD</p>
+          </div>
         </div>
-        <button class="btn"><a href="#">Read More</a></button>
-      </div>
+        <img src=<?php echo get_theme_file_uri( 'assets/book.png' ) ?>>
+        <div class="buttons">
+          <button class="btn"><a href="#">Read More</a></button>
+          <button class="btn"><a href="#">Order Now</a></button>
+        </div>
+    </div>
   </div>
 </section>
 

@@ -127,13 +127,22 @@ body { color: #656565; }
 }
 .btn a:hover { color: white; }
 
-/* Homepage book section */
-#book { padding: 50px 0; background-color: #f6f6f6; }
-#book .container { display: flex; justify-content: space-around; }
-#book h1 { text-align: center; }
-#book img { margin-right: 20px; }
-#book-desc { display: flex; flex-direction: column; justify-content: space-around; width: 35%; }
-#book-desc .btn { width: 50%; }
+/* Homepage bio and book section */
+#book-bio > div { width: 50%; box-sizing: border-box; padding: 0 40px;}
+#book-bio p { margin-bottom: 15px; width: 90%; }
+#book-bio .quote p { margin-bottom: 10px; width: 90%; }
+#book { padding: 50px 0; background-color: white; position: relative; }
+#book h1 { text-align: center; padding: 15px 0; margin: 0; }
+#book img { width: 45%; height: 220px; margin-right: 10%; }
+#book .buttons {
+	display: inline-flex;
+	justify-content: space-between;
+	flex-direction: column;
+	position: absolute;
+	bottom: 150px;
+	height: 100px;
+	width: 30%;
+}
 
 /* Homepage testimonials section */
 #testimonials {
