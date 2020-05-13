@@ -68,6 +68,16 @@ get_header();
         </div>
     </div>
   </div>
+  <div id="bio">
+    <h1>Dr.Rayes</h1>
+    <img src=<?php echo get_theme_file_uri( 'assets/rayes-rounded.png' ) ?>>
+    <p>
+      After suffering from depression and finding his own way to healing,
+      Dr. El-Rayes was inspired to establish the H.R. Mental Wellness Center in order to share his personal and professional experience,
+      as well as his training as a coach and group facilitator.
+    </p>
+    <button class="btn"><a href="#">Read More</a></button>
+  </div>
 </section>
 
 <?php get_footer(); ?>
