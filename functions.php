@@ -8,23 +8,20 @@ add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 
 // Filter hook that return the hero section description depending on the path
 function hero_desc($uri) {
-  $descriptions = array(
-    '/' => array (
-      'top' => 'HR Mental Wellness',
-      'bottom' => 'Addressing body, mind and spirit to create a happier and more fulfilling life'
-    )
-  );
-  if(in_array($uri, array_keys($descriptions)))
-    return $descriptions[$uri];
+  if($uri === '/') {
+    return array(
+      'top' => get_bloginfo('name'),
+      'bottom' => get_bloginfo('description')
+    );
+  }
   else
-    return 'HR Mental Wellness Centre';
+    return the_title('', '', false);
 }
 add_filter('get_hero_desc', 'hero_desc');
 
 // Filter hook that returns the hero section image depending on the post ID
 function page_img($id) {
   $img_link = wp_get_attachment_url( get_post_thumbnail_id($id));
-  return $img_link;
   if($img_link)
     return $img_link;
   else

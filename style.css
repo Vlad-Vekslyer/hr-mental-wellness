@@ -86,11 +86,7 @@ body { color: #656565; }
 	background-color: rgba(0,0,0,0.45);
 	overflow: hidden;
 }
-.hero img {
-	position: relative;
-	bottom: 50px;
-	z-index: -1
-}
+.hero img { position: relative; z-index: -1; }
 .hero div {
 	position: absolute;
 	top: 150px;
