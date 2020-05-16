@@ -55,9 +55,6 @@ body { color: #656565; }
 	color: white;
 }
 
-/* Default Content Alignbox */
-.default_content_alignbx { float: clear; width: 100%; }
-
 /* Modal Link Widget */
 .modal-link {
 	position: relative;
@@ -130,27 +127,28 @@ body { color: #656565; }
 
 /* Homepage bio and book section */
 #book-bio { display: flex; }
-#book-bio p { margin-bottom: 15px; width: 90%; }
+#book-bio p { margin-bottom: 15px; }
 #book-bio h1 { text-align: center; padding: 15px 0; margin: 0; }
 #book-bio > div {
 	width: 50%;
 	box-sizing: border-box;
-	padding: 0 40px;
+	padding: 0 70px;
 }
-#book-bio .quote p { margin-bottom: 10px; width: 90%; }
+#book-bio .quote p { margin-bottom: 10px; }
 
 #bio { display: flex; flex-direction: column; align-items: center;}
 #bio p { margin-top: 15px; }
 #bio .btn { width: 30%; }
 
-#book { padding: 50px 0; background-color: white; position: relative; }
-#book img { width: 40%; height: 180px; margin-right: 15%; }
+#book { background-color: white; }
+#book-desc-bottom { display: flex; justify-content: space-between; }
+#book img { width: 45%; height: 180px; }
 #book .buttons {
 	display: inline-flex;
 	justify-content: space-between;
 	flex-direction: column;
-	position: absolute;
-	bottom: 130px;
+	position: relative;
+	bottom: 35px;
 	height: 100px;
 	width: 30%;
 }

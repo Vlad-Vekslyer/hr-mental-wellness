@@ -61,10 +61,12 @@ get_header();
             <p>-Samir Abdel, MD</p>
           </div>
         </div>
-        <img src=<?php echo get_theme_file_uri( 'assets/book.png' ) ?>>
-        <div class="buttons">
-          <button class="btn"><a href="#">Read More</a></button>
-          <button class="btn"><a href="#">Order Now</a></button>
+        <div id="book-desc-bottom">
+          <img src=<?php echo get_theme_file_uri( 'assets/book.png' ) ?>>
+          <div class="buttons">
+            <button class="btn"><a href="#">Read More</a></button>
+            <button class="btn"><a href="#">Order Now</a></button>
+          </div>
         </div>
     </div>
   </div>
