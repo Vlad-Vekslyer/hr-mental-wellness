@@ -49,7 +49,8 @@ body { color: #656565; }
 
 /* Sitenav */
 .sitenav { width: 82%; }
-.sitenav #menu-test-menu li a:hover, .sitenav .menu li a:hover {
+.sitenav #menu-test-menu li a, #menu-header li a, .sitenav .menu li a, .sitenav ul li.current-menu-item > a { color: white; }
+.sitenav #menu-test-menu li a:hover, #menu li a:hover, .sitenav .menu li a:hover {
 	border-bottom: solid 4px white;
 	color: white;
 }
