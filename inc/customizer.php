@@ -38,8 +38,8 @@ function flourish_lite_child_customize_register( $wp_customize ) {
 
 	//Homepage Options
 	$wp_customize->add_section('flourish_lite_child_hero', array(
-		'title' => __( 'Hero' ),
-		'description' => __('Customize the Hero section'),
+		'title' => __( 'Default Hero Image' ),
+		'description' => __('The default hero image will be used for the homepage'),
 		'capability' => 'edit_theme_options',
 		'panel' => 'flourish_lite_panel_section'
 	));

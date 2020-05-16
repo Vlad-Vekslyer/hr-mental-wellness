@@ -21,11 +21,16 @@ function hero_desc($uri) {
 }
 add_filter('get_hero_desc', 'hero_desc');
 
-// Import and register custom customization options
-require get_stylesheet_directory() . '/inc/customizer.php';
-
-// Import and register custom widgets
-require get_stylesheet_directory() . '/inc/widgets.php';
+// Filter hook that returns the hero section image depending on the post ID
+function page_img($id) {
+  $img_link = wp_get_attachment_url( get_post_thumbnail_id($id));
+  return $img_link;
+  if($img_link)
+    return $img_link;
+  else
+    return get_theme_mod('flourish_lite_child_hero_image');
+}
+add_filter('get_page_img', 'page_img');
 
 function flourish_lite_child_widgets_init() {
   register_sidebar(array(
@@ -36,5 +41,11 @@ function flourish_lite_child_widgets_init() {
   ));
 }
 add_action( 'widgets_init', 'flourish_lite_child_widgets_init' );
+
+// Import and register custom customization options
+require get_stylesheet_directory() . '/inc/customizer.php';
+// Import and register custom widgets
+require get_stylesheet_directory() . '/inc/widgets.php';
+
 
 ?>
