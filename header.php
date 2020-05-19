@@ -209,8 +209,9 @@ wp_reset_postdata(); ?>
 
 <div class="hero">
 	<img width="100%" src=<?= apply_filters('get_page_img', $post->ID) ?>>
-	<div>
+	<div class=<?= $post->ID !== 1 ? "reg-page" : "" ?>>
 		<?php
+			// Get the text that should go into the page's hero section
 			$desc = apply_filters('get_hero_desc', $_SERVER['REQUEST_URI']);
 			if(is_array($desc)){
 				$top = $desc['top'];

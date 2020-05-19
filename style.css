@@ -99,6 +99,7 @@ body { color: #656565; }
 .hero div h1, .hero div h3 { color: white; }
 .hero div h1 { font-size: 50px; }
 .hero div h3 { font-weight: normal; width: 50%; }
+.hero .reg-page h1 { font-size: 65px; text-align: center; }
 
 /* Quotes */
 .quote p:first-of-type { font-size: 1.1em; margin-bottom: 10px;}
