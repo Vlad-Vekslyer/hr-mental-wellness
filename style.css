@@ -17,6 +17,7 @@ Text Domain: flourish-lite-child
 :root {
 	--orange-dark: #E48B00;
 	--blue-dark: #3166A0;
+	--grey: #656565;
 }
 body { color: #656565; }
 
@@ -126,6 +127,20 @@ body { color: #656565; }
 	padding: 10px 30px;
 }
 .btn a:hover { color: white; }
+
+/* Full width page bottom bar */
+#bottom-bar > h2 { text-align: center; color: var(--blue-dark); }
+#bottom-bar .pages { display: flex; justify-content: center; margin: 30px 0; }
+#bottom-bar .page {
+	width: 25%;
+	padding: 15px 25px;
+	box-sizing: border-box;
+	float: none;
+	border-radius: 15px;
+	margin: 0 3%;
+}
+#bottom-bar .page h3 { margin-bottom: 5px; }
+#bottom-bar .page hr { margin-bottom: 10px; color: var(--grey); opacity: 0.5; }
 
 /* Homepage bio and book section */
 #book-bio { display: flex; }

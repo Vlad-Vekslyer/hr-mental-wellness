@@ -55,9 +55,10 @@ get_header(); ?>
             $content_paragraphs = preg_replace('/<!-- wp:heading -->\s*<h\d>.*<\/h\d>\s*<!-- \/wp:heading -->/i', '', $content);
             ?>
 
-            <div class="page">
+            <div class="page default_content_alignbx">
               <a href=<?= the_permalink(); ?>>
                 <h3><?= the_title(); ?></h3>
+                <hr>
                 <p><?= substr($content_paragraphs, 0, 150); ?>...</p>
               </a>
             </div>
