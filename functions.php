@@ -1,10 +1,10 @@
 <?php
 
-// Inherit Parent Theme
-function enqueue_parent_styles() {
-   wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
+// // Inherit Parent Theme
+// function enqueue_parent_styles() {
+//    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+// }
+// add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 
 // Filter hook that return the hero section description depending on the path
 function hero_desc($uri) {

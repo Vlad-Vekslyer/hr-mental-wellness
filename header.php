@@ -24,73 +24,10 @@
 	    wp_body_open();
 	}
 ?>
-<a class="skip-link screen-reader-text" href="#content_holder">
-<?php esc_html_e( 'Skip to content', 'flourish-lite' ); ?>
-</a>
-<?php
-$flourish_lite_show_ht_contactinfo_sections 	= esc_attr( get_theme_mod('flourish_lite_show_ht_contactinfo_sections', false) );
-$flourish_lite_show_home_slider_section 	  	= esc_attr( get_theme_mod('flourish_lite_show_home_slider_section', false) );
-$flourish_lite_show_threebox_services_sections 	= esc_attr( get_theme_mod('flourish_lite_show_threebox_services_sections', false) );
-$flourish_lite_show_whychooseus_sections	    = esc_attr( get_theme_mod('flourish_lite_show_whychooseus_sections', false) );
-?>
+
 <div id="sitelayout" <?php if( get_theme_mod( 'flourish_lite_boxlayout' ) ) { echo 'class="boxlayout"'; } ?>>
-<?php
-if ( is_front_page() && !is_home() ) {
-	if( !empty($flourish_lite_show_home_slider_section)) {
-	 	$inner_cls = '';
-	}
-	else {
-		$inner_cls = 'siteinner';
-	}
-}
-else {
-$inner_cls = 'siteinner';
-}
-?>
 
 <div class="site-header <?php echo esc_attr($inner_cls); ?> ">
-  <div class="container">
-      <div class="logo">
-           <?php flourish_lite_the_custom_logo(); ?>
-            <img src=<?php echo get_theme_file_uri( 'assets/hr-logo.png' ) ?>>
-      </div><!-- logo -->
-
-
-    <?php if( $flourish_lite_show_ht_contactinfo_sections != ''){ ?>
-      <div class="cotact_info_area">
-
-		  <?php
-            $flourish_lite_htemailinfo = get_theme_mod('flourish_lite_htemailinfo');
-               if( !empty($flourish_lite_htemailinfo) ){ ?>
-               <div class="infobox">
-                 <i class="far fa-envelope"></i>
-                 <span>
-			       <strong><?php esc_html_e('Email Us','flourish-lite'); ?></strong>
-                   <a href="<?php echo esc_url('mailto:'.get_theme_mod('flourish_lite_htemailinfo')); ?>">
-				   <?php echo esc_html($flourish_lite_htemailinfo); ?></a>
-                </span>
-              </div>
-         <?php } ?>
-
-
-		 <?php
-            $flourish_lite_site_htphoneinfo = get_theme_mod('flourish_lite_site_htphoneinfo');
-               if( !empty($flourish_lite_site_htphoneinfo) ){ ?>
-               <div class="infobox">
-                 <i class="fas fa-mobile-alt"></i>
-                 <span>
-			       <strong><?php esc_html_e('Call Us','flourish-lite'); ?> <div><?php echo esc_html($flourish_lite_site_htphoneinfo); ?></div>	</strong>
-                </span>
-              </div>
-         <?php } ?>
-
- </div>
- <?php } ?>
-
-
-  <div class="clear"></div>
-  </div><!-- .container -->
-
   <div class="navigation_bar">
     <div class="container">
          <div class="toggle">
@@ -152,60 +89,6 @@ endwhile;
 wp_reset_postdata(); ?>
 <?php } ?>
 <?php } } ?>
-
-
-<?php if ( is_front_page() && ! is_home() ) {
- if( $flourish_lite_show_threebox_services_sections != ''){ ?>
-  <div id="threebox_sections">
-     <div class="container">
-       <?php
-        for($n=1; $n<=3; $n++) {
-        if( get_theme_mod('flourish_lite_select3page_column'.$n,false)) {
-            $queryvar = new WP_Query('page_id='.absint(get_theme_mod('flourish_lite_select3page_column'.$n,true)) );
-            while( $queryvar->have_posts() ) : $queryvar->the_post(); ?>
-            <div class="three_column <?php if($n % 3 == 0) { echo "last_column"; } ?>">
-                <?php if(has_post_thumbnail() ) { ?>
-                <div class="thumbbx"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
-                <?php } ?>
-                <div class="pagecontent">
-                  <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                  <?php the_excerpt(); ?>
-                  <a class="learnmore" href="<?php the_permalink(); ?>"><?php esc_html_e('Read More','flourish-lite'); ?></a>
-                </div>
-            </div>
-            <?php endwhile;
-            wp_reset_postdata();
-        } } ?>
-    <div class="clear"></div>
-   </div><!-- .container -->
-</div><!-- #threebox_sections -->
-<?php } ?>
-
-
-
-<?php if( $flourish_lite_show_whychooseus_sections != ''){ ?>
-<section id="whychooseus_sections">
-<div class="container">
-<div class="welwrapper">
-<?php
-	if( get_theme_mod('flourish_lite_createpagefor_whychooseus',false)) {
-	$queryvar = new WP_Query('page_id='.absint(get_theme_mod('flourish_lite_createpagefor_whychooseus',true)) );
-		while( $queryvar->have_posts() ) : $queryvar->the_post(); ?>
-           <?php if(has_post_thumbnail() ) { ?>
-                <div class="welcome_imgbox"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
-           <?php } ?>
-		  <h3><?php the_title(); ?></h3>
-		 <?php the_content(); ?>
-		<?php endwhile;
-		 wp_reset_postdata(); ?>
-  <?php } ?>
-</div><!-- .welwrapper -->
-
-<div class="clear"></div>
-</div><!-- container -->
-</section><!-- #whychooseus_sections-->
-<?php } ?>
-<?php } ?>
 
 <div class="hero">
 	<img width="100%" src=<?= apply_filters('get_page_img', $post->ID) ?>>

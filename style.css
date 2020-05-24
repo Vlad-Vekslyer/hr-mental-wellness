@@ -19,7 +19,21 @@ Text Domain: flourish-lite-child
 	--blue-dark: #3166A0;
 	--grey: #656565;
 }
-body { color: #656565; }
+
+body {
+	color: #656565;
+	margin: 0;
+	font-family: 'Assistant', sans-serif;
+}
+
+h1, h2, h3, h4, h5 , h6 {
+	font-family: 'Assistant', sans-serif;
+  color: #303030;
+  margin: 0 0 20px;
+  padding: 0;
+  font-weight: 600;
+  line-height: 1.1;
+}
 
 /* Contact info area */
 .cotact_info_area { padding-top: 30px; }
