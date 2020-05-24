@@ -13,30 +13,7 @@ Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-
 Text Domain: flourish-lite-child
 */
 
-/* Global */
-:root {
-	--orange-dark: #E48B00;
-	--blue-dark: #3166A0;
-	--grey: #656565;
-}
-
-body {
-	color: #656565;
-	margin: 0;
-	font-family: 'Assistant', sans-serif;
-}
-
-h1, h2, h3, h4, h5 , h6 {
-	font-family: 'Assistant', sans-serif;
-  color: #303030;
-  margin: 0 0 20px;
-  padding: 0;
-  font-weight: 600;
-  line-height: 1.1;
-}
-
-/* Contact info area */
-.cotact_info_area { padding-top: 30px; }
+@import url("assets/css/global.css");
 
 /* Full width pages */
 #content_holder.full-width { padding-left: 150px; padding-right: 150px; }

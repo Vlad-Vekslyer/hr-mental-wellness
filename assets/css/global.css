@@ -1,0 +1,36 @@
+:root {
+	--orange-dark: #E48B00;
+	--blue-dark: #3166A0;
+	--grey: #656565;
+}
+
+* { box-sizing: border-box; }
+
+body {
+	color: #656565;
+	margin: 0;
+	font-family: 'Assistant', sans-serif;
+}
+
+/* HEADERS */
+h1, h2, h3, h4, h5 , h6 {
+	font-family: 'Assistant', sans-serif;
+  color: #303030;
+  margin: 0 0 20px;
+  padding: 0;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+h1 { font-size: 40px; }
+h3 { font-size: 30px; }
+h4 { font-size: 22px; }
+
+/* LINKS */
+a { text-decoration: none; }
+
+/* BUTTONS */
+button { text-align: center; }
+
+/* content_holder */
+#content_holder { padding: 50px 0; }
