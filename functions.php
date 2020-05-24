@@ -1,11 +1,4 @@
 <?php
-
-// // Inherit Parent Theme
-// function enqueue_parent_styles() {
-//    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-// }
-// add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
-
 // Filter hook that return the hero section description depending on the path
 function hero_desc($uri) {
   if($uri === '/') {
@@ -43,6 +36,5 @@ add_action( 'widgets_init', 'flourish_lite_child_widgets_init' );
 require get_stylesheet_directory() . '/inc/customizer.php';
 // Import and register custom widgets
 require get_stylesheet_directory() . '/inc/widgets.php';
-
 
 ?>
