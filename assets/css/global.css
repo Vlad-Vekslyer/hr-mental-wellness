@@ -33,6 +33,9 @@ a { text-decoration: none; }
 /* BUTTONS */
 button { text-align: center; }
 
+/* PARAGRAPHS */
+p { margin: 0; padding: 0; }
+
 /* container CLASS*/
 .container { width: 80%; margin: 0 auto; }
 
