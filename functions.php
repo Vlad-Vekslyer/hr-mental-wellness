@@ -1,4 +1,10 @@
 <?php
+
+function enqueue_parent_styles() {
+   wp_enqueue_style( 'parent-style',  '/wp-content/themes/flourish-lite-child/style.css' );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
+
 // Filter hook that return the hero section description depending on the path
 function hero_desc($uri) {
   if($uri === '/') {
