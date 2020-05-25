@@ -5,7 +5,6 @@ description: >-
    Flourish Lite Child
 Author: Vladyslav Vekslyer
 Author URI: http://vlad-veks.com
-Template: flourish-lite
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,16 +14,21 @@ Text Domain: flourish-lite-child
 
 @import url("assets/css/global.css");
 
-/* Navigation bar */
-.navigation_bar { background-color: var(--blue-dark); }
-
 /* Sitenav */
-.sitenav { width: 82%; }
-.sitenav #menu-test-menu li a, #menu-header li a, .sitenav .menu li a, .sitenav ul li.current-menu-item > a { color: white; }
-.sitenav #menu-test-menu li a:hover, #menu li a:hover, .sitenav .menu li a:hover {
-	border-bottom: solid 4px white;
-	color: white;
+.sitenav { display: inline-block; width: 60%; }
+.sitenav ul { list-style: none; }
+.sitenav li > a, .sitenav ul li.current-menu-item > a { text-decoration: none; color: var(--grey); }
+.menu { display: flex; padding: 0; }
+.menu > .menu-item { width: 20%; padding: 10px 20px; }
+.sub-menu {
+	display: none;
+	background-color: white;
+	padding: 0;
+	position: absolute;
 }
+.menu-item { position: relative; text-align: center; }
+.menu-item:hover > .sub-menu { display: inline-block; }
+.sub-menu:hover { display: inline-block; }
 
 /* Modal Link Widget */
 .modal-link {

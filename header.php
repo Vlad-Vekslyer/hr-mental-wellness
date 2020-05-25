@@ -17,14 +17,9 @@
 	}
 ?>
 
-<div id="sitelayout" <?php if( get_theme_mod( 'flourish_lite_boxlayout' ) ) { echo 'class="boxlayout"'; } ?>>
-
-<div class="site-header <?php echo esc_attr($inner_cls); ?> ">
+<header class="<?php echo esc_attr($inner_cls); ?> ">
   <div class="navigation_bar">
     <div class="container">
-         <div class="toggle">
-           <a class="toggleMenu" href="#"><?php esc_html_e('Menu','flourish-lite'); ?></a>
-         </div><!-- toggle -->
          <div class="sitenav">
             <?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
          </div><!--.sitenav -->
@@ -33,7 +28,7 @@
    </div><!--.navigation_bar -->
   <div class="clear"></div>
 
-</div><!--.site-header -->
+</header><!--.site-header -->
 
 <div class="hero">
 	<img width="100%" src=<?= apply_filters('get_page_img', $post->ID) ?>>
@@ -50,4 +45,4 @@
 				echo "<h1>$desc</h1>";
 		?>
 	</div>
-</div>
+</div><!-- hero -->

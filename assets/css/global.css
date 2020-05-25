@@ -35,5 +35,8 @@ a { text-decoration: none; }
 /* PARAGRAPHS */
 p { margin: 0; padding: 0; }
 
+/* HEADER */
+header { background-color: white; }
+
 /* FOOTER */
 footer { text-align: center; }
