@@ -49,7 +49,7 @@
           </div>
         </div>
         <div id="book-desc-bottom">
-          <img src=<?php echo get_theme_file_uri( 'assets/book.png' ) ?>>
+          <img src=<?php echo get_theme_file_uri( 'assets/images/book.png' ) ?>>
           <div class="buttons">
             <button class="btn"><a href="#">Read More</a></button>
             <button class="btn"><a href="#">Order Now</a></button>
@@ -59,7 +59,7 @@
   </div>
   <div id="bio">
     <h1>Dr.Rayes</h1>
-    <img src=<?php echo get_theme_file_uri( 'assets/rayes-rounded.png' ) ?>>
+    <img src=<?php echo get_theme_file_uri( 'assets/images/rayes-rounded.png' ) ?>>
     <p>
       After suffering from depression and finding his own way to healing,
       Dr. El-Rayes was inspired to establish the H.R. Mental Wellness Center in order to share his personal and professional experience,
