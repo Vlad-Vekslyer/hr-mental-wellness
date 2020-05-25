@@ -9,6 +9,7 @@
 
 body {
 	color: #656565;
+	background-color: #f6f6f6;
 	margin: 0;
 	font-family: 'Assistant', sans-serif;
 }
@@ -24,20 +25,15 @@ h1, h2, h3, h4, h5 , h6 {
 }
 
 h1 { font-size: 40px; }
+h2 { font-size: 34px; }
 h3 { font-size: 30px; }
 h4 { font-size: 22px; }
 
 /* LINKS */
 a { text-decoration: none; }
 
-/* BUTTONS */
-button { text-align: center; }
-
 /* PARAGRAPHS */
 p { margin: 0; padding: 0; }
 
-/* container CLASS*/
-.container { width: 80%; margin: 0 auto; }
-
-/* content_holder ID */
-#content_holder { padding: 50px 0; }
+/* FOOTER */
+footer { text-align: center; }

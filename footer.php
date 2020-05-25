@@ -1,10 +1,10 @@
-<div class="site-footer">
-        <div class="copyrigh-wrapper">
-            <div class="container">
-  			 	    <?php bloginfo('name'); ?> © 2020
-            </div><!--end .container-->
-        </div><!--end .copyrigh-wrapper-->
- </div><!--end #site-footer-->
+<footer>
+  <div class="container">
+    <div class="copyrigh-wrapper">
+  	    <?php bloginfo('name'); ?> © 2020
+    </div><!--end .copyrigh-wrapper-->
+  </div><!--end .container-->
+</footer><!--end #site-footer-->
 </div><!--#end sitelayout-->
 <?php wp_footer(); ?>
 </body>

@@ -13,24 +13,22 @@
 get_header(); ?>
 <div class="container">
   <div id="content_holder" class="full-width">
-    <div class="default_content_alignbx">
-      <?php while( have_posts() ) : the_post(); ?>
-        <div class="entry-content">
-  			  <?php the_content(); ?>
-          <?php
-            wp_link_pages( array(
-            'before' => '<div class="page-links">' . __( 'Pages:', 'flourish-lite' ),
-            'after'  => '</div>',
-            ) );
-          ?>
-         <?php
-            //If comments are open or we have at least one comment, load up the comment template
-            if ( comments_open() || '0' != get_comments_number() )
-                comments_template();
-         ?>
-        </div><!-- entry-content -->
-      <?php endwhile; ?>
-    </div><!-- default_content_alignbx-->
+    <?php while( have_posts() ) : the_post(); ?>
+    <div class="entry-content">
+  	  <?php the_content(); ?>
+      <?php
+        wp_link_pages( array(
+        'before' => '<div class="page-links">' . __( 'Pages:', 'flourish-lite' ),
+        'after'  => '</div>',
+        ) );
+      ?>
+     <?php
+        //If comments are open or we have at least one comment, load up the comment template
+        if ( comments_open() || '0' != get_comments_number() )
+            comments_template();
+     ?>
+    </div><!-- entry-content -->
+    <?php endwhile; ?>
   </div><!-- .content_holder -->
   <div id="bottom-bar">
     <?php
@@ -55,7 +53,7 @@ get_header(); ?>
             $content_paragraphs = preg_replace('/<!-- wp:heading -->\s*<h\d>.*<\/h\d>\s*<!-- \/wp:heading -->/i', '', $content);
             ?>
 
-            <div class="page default_content_alignbx">
+            <div class="page">
               <a href=<?= the_permalink(); ?>>
                 <h3><?= the_title(); ?></h3>
                 <hr>
