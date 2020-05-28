@@ -1,9 +1,10 @@
 <?php
 
-function enqueue_parent_styles() {
-   wp_enqueue_style( 'parent-style',  '/wp-content/themes/flourish-lite-child/style.css' );
+function enqueue_styles() {
+   wp_enqueue_style( 'style',  '/wp-content/themes/hr/style.css' );
+   wp_enqueue_style('font', 'https://fonts.googleapis.com/css?family=Assistant%3A300%2C400%2C600%2C800&#038;ver=5.4.1');
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
+add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 
 // Filter hook that return the hero section description depending on the path
 function hero_desc($uri) {
@@ -24,7 +25,7 @@ function page_img($id) {
   if($img_link)
     return $img_link;
   else
-    return get_theme_mod('flourish_lite_child_hero_image');
+    return get_theme_mod('hr_hero_image');
 }
 add_filter('get_page_img', 'page_img');
 

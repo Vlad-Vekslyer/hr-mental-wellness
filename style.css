@@ -7,17 +7,24 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
-Text Domain: flourish-lite-child
+Text Domain: hr
 */
 
 @import url("assets/css/global.css");
 
-/* Sitenav */
-.sitenav { display: inline-block; width: 60%; }
+/* Navigation Bar */
+.navigation_bar {
+	display: flex;
+	align-items: center;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.sitenav { display: inline-block; width: 80%; }
 .sitenav ul { list-style: none; }
 .sitenav li > a, .sitenav ul li.current-menu-item > a { text-decoration: none; color: var(--grey); }
 .menu { display: flex; padding: 0; }
-.menu > .menu-item { width: 20%; padding: 10px 20px; }
+.menu .menu-item { width: 15%; padding: 20px 0; }
 .sub-menu {
 	display: none;
 	background-color: white;
@@ -25,8 +32,7 @@ Text Domain: flourish-lite-child
 	position: absolute;
 }
 .menu-item { position: relative; text-align: center; }
-.menu-item:hover > .sub-menu { display: inline-block; }
-.sub-menu:hover { display: inline-block; }
+.menu-item:hover .sub-menu { display: inline-block; }
 
 /* Modal Link Widget */
 .modal-link {

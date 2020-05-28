@@ -1,6 +1,6 @@
 <?php
 
-function flourish_lite_child_customize_register( $wp_customize ) {
+function hr_customize_register( $wp_customize ) {
 
 	// function flourish_lite_child_sanitize_dropdown_pages( $page_id, $setting ) {
 	//   // Ensure $input is an absolute integer.
@@ -27,14 +27,14 @@ function flourish_lite_child_customize_register( $wp_customize ) {
 	) );
 
 	//Homepage Options
-	$wp_customize->add_section('flourish_lite_child_hero', array(
+	$wp_customize->add_section('hr_hero', array(
 		'title' => __( 'Default Hero Image' ),
 		'description' => __('The default hero image will be used for the homepage'),
 		'capability' => 'edit_theme_options',
 		'panel' => 'theme_options'
 	));
 
-	$wp_customize->add_setting('flourish_lite_child_hero_image', array(
+	$wp_customize->add_setting('hr_hero_image', array(
 		'type' => 'theme_mod',
 		'default' => '',
 	));
@@ -42,15 +42,13 @@ function flourish_lite_child_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Image_Control(
 			$wp_customize,
-			'flourish_lite_child_hero_image',
+			'hr_hero_image',
 			array(
 				'description' => 'Custom Hero Image URL',
 				'label' => __('Hero Image'),
-				'section' => 'flourish_lite_child_hero'
+				'section' => 'hr_hero'
 			)
 		)
 	);
-
-	$wp_customize->remove_panel('flourish_lite_panel_section');
 }
-add_action( 'customize_register', 'flourish_lite_child_customize_register', 15);
+add_action( 'customize_register', 'hr_customize_register');

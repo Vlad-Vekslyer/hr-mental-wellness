@@ -19,15 +19,12 @@
 
 <header class="<?php echo esc_attr($inner_cls); ?> ">
   <div class="navigation_bar">
-    <div class="container">
-         <div class="sitenav">
-            <?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
-         </div><!--.sitenav -->
-         <div class="clear"></div>
-      </div><!-- .container -->
+		 <img width="10%" height="100" src=<?= get_stylesheet_directory_uri() . "/assets/images/hr-logo.png" ?>>
+		 <div class="sitenav">
+		    <?php wp_nav_menu(); ?>
+		 </div><!--.sitenav -->
+		 <button class="btn"><a href="#">Get Help</a></button>
    </div><!--.navigation_bar -->
-  <div class="clear"></div>
-
 </header><!--.site-header -->
 
 <div class="hero">
