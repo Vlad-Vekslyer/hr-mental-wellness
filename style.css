@@ -29,31 +29,26 @@ Text Domain: hr
 	padding: 0 40px;
 	font-size: 20px;
 }
-.sitenav ul { list-style: none; }
+.sitenav ul { list-style: none; padding: 0; }
 .sitenav li > a, .sitenav ul li.current-menu-item > a { text-decoration: none; color: var(--grey); }
-.menu { display: flex; padding: 0; }
-.menu > .menu-item {
-	position: relative;
-	margin: 18px 3.5%;
-	padding: 0 4%;
-	padding-bottom: 10px;
-	border-bottom: 2px solid rgba(0,0,0,0);
-}
+.menu-item { text-align: center; }
+.menu { display: flex; }
+.menu > .menu-item { margin: 18px 3.5%; border-bottom: 2px solid rgba(0,0,0,0); }
+.menu > .menu-item-has-children { position: relative; }
+.menu > .menu-item > a { padding: 0 40px 15px 40px; display: inline-block; }
 .menu > .menu-item:hover { border-color: var(--blue-light); }
 .sub-menu {
 	display: none;
 	background-color: white;
 	position: absolute;
 	z-index: 1;
-	padding: 0;
 	left: 0;
-	top: 38px;
+	top: 43px;
 	box-shadow: 0 5px 5px rgba(0,0,0,0.2);
 	width: 100%;
 }
-.sub-menu > .menu-item { padding: 10px 15px; }
+.sub-menu > .menu-item > a { padding: 10px 15px; display: inline-block;}
 .sub-menu > .menu-item:hover { background-color: rgba(0,0,0,0.05); }
-.menu-item { text-align: center; }
 .menu-item:hover .sub-menu { display: inline-block; }
 
 /* Modal Link Widget */
