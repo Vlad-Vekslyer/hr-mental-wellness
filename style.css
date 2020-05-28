@@ -21,6 +21,8 @@ Text Domain: hr
 	margin: 0 auto;
 }
 
+.navigation_bar > .btn a { padding: 10px 25px; }
+
 .sitenav {
 	display: inline-block;
 	width: 80%;
