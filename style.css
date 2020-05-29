@@ -11,49 +11,7 @@ Text Domain: hr
 */
 
 @import url("assets/css/global.css");
-
-/* Navigation Bar */
-.navigation_bar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 95%;
-	margin: 0 auto;
-}
-
-.navigation_bar > .btn a { padding: 10px 25px; }
-
-.sitenav {
-	display: inline-block;
-	width: 80%;
-	padding: 0 40px;
-	font-size: 20px;
-}
-.sitenav ul { list-style: none; padding: 0; }
-.sitenav li > a, .sitenav ul li.current-menu-item > a { text-decoration: none; color: var(--grey); }
-.menu-item { text-align: center; }
-.menu { display: flex; }
-.menu > .menu-item {
-	margin: 18px 3.5%;
-	border-bottom: 2px solid rgba(0,0,0,0);
-	position: relative;
-	top: 10px;
-}
-.menu > .menu-item > a { padding: 0 40px 15px 40px; display: inline-block; }
-.menu > .menu-item:hover { border-color: var(--blue-light); }
-.sub-menu {
-	display: none;
-	background-color: white;
-	position: absolute;
-	z-index: 1;
-	left: 0;
-	top: 43px;
-	box-shadow: 0 5px 5px rgba(0,0,0,0.2);
-	width: 100%;
-}
-.sub-menu > .menu-item > a { padding: 10px 15px; display: inline-block;}
-.sub-menu > .menu-item:hover { background-color: rgba(0,0,0,0.05); }
-.menu-item:hover .sub-menu { display: inline-block; }
+@import url("assets/css/navigation-bar.css");
 
 /* Modal Link Widget */
 .modal-link {
