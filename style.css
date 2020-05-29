@@ -33,8 +33,12 @@ Text Domain: hr
 .sitenav li > a, .sitenav ul li.current-menu-item > a { text-decoration: none; color: var(--grey); }
 .menu-item { text-align: center; }
 .menu { display: flex; }
-.menu > .menu-item { margin: 18px 3.5%; border-bottom: 2px solid rgba(0,0,0,0); }
-.menu > .menu-item-has-children { position: relative; }
+.menu > .menu-item {
+	margin: 18px 3.5%;
+	border-bottom: 2px solid rgba(0,0,0,0);
+	position: relative;
+	top: 10px;
+}
 .menu > .menu-item > a { padding: 0 40px 15px 40px; display: inline-block; }
 .menu > .menu-item:hover { border-color: var(--blue-light); }
 .sub-menu {
