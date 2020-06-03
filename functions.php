@@ -6,7 +6,7 @@ function enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 
-// Filter hook that return the hero section description depending on the path
+// return the hero section description depending on the path
 function hero_desc($uri) {
   if($uri === '/') {
     return array(
@@ -19,7 +19,7 @@ function hero_desc($uri) {
 }
 add_filter('get_hero_desc', 'hero_desc');
 
-// Filter hook that returns the hero section image depending on the post ID
+// returns the hero section image depending on the post ID
 function page_img($id) {
   $img_link = wp_get_attachment_url( get_post_thumbnail_id($id));
   if($img_link)
@@ -39,6 +39,7 @@ function flourish_lite_child_widgets_init() {
 }
 add_action( 'widgets_init', 'flourish_lite_child_widgets_init' );
 
+// queries for pages by tags and return the query object
 function query_by_tags($tags, $postID, $pageNum = 3) {
   $tag_ids = array();
   foreach($tags as $tag)
@@ -54,28 +55,28 @@ function query_by_tags($tags, $postID, $pageNum = 3) {
 }
 add_filter('tag_query', 'query_by_tags', 10, 3);
 
+// prints the markup for the related pages section using a WP_Query object
 function print_related_pages($query) {
-  if($query->have_posts()){
-    echo "<h2>Related Pages</h2>";
-    echo "<div class='pages'>";
-    while($query->have_posts()) {
-      $query->the_post();
-      $content = get_the_content();
-      $content_paragraphs = preg_replace('/<!-- wp:heading -->\s*<h\d>.*<\/h\d>\s*<!-- \/wp:heading -->/i', '', $content);
-      ?>
+  echo "<h2>Related Pages</h2>";
+  echo "<div class='pages'>";
+  // print markup for each individual related page inside the query
+  while($query->have_posts()) {
+    $query->the_post();
+    $content = get_the_content();
+    $content_paragraphs = preg_replace('/<!-- wp:heading -->\s*<h\d>.*<\/h\d>\s*<!-- \/wp:heading -->/i', '', $content);
+    ?>
 
-      <div class="page">
-        <a href=<?= the_permalink(); ?>>
-          <h3><?= the_title(); ?></h3>
-          <hr>
-          <p><?= substr($content_paragraphs, 0, 150); ?>...</p>
-        </a>
-      </div>
+    <div class="page">
+      <a href=<?= the_permalink(); ?>>
+        <h3><?= the_title(); ?></h3>
+        <hr>
+        <p><?= substr($content_paragraphs, 0, 150); ?>...</p>
+      </a>
+    </div>
 
-      <?php
-    }
-    echo "</div>";
+    <?php
   }
+  echo "</div>";
   wp_reset_query();
 }
 add_action('related_pages', 'print_related_pages');

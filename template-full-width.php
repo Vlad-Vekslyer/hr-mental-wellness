@@ -35,7 +35,8 @@ get_header(); ?>
       $tags = wp_get_post_tags($post->ID);
       if($tags) {
         $query = apply_filters('tag_query', $tags, $post->ID);
-        do_action('related_pages', $query);
+        if($query->have_posts())
+          do_action('related_pages', $query);
       }
     ?>
   </div><!-- bottom-bar -->
