@@ -12,6 +12,8 @@ Text Domain: hr
 
 @import url("assets/css/global.css");
 @import url("assets/css/navigation-bar.css");
+@import url("assets/css/home.css");
+@import url("assets/css/full-width.css");
 
 /* Modal Link Widget */
 .modal-link {
@@ -84,7 +86,7 @@ Text Domain: hr
 /* container */
 .container { width: 80%; margin: 0 auto; }
 
-/* content_holder ID */
+/* content_holder */
 #content_holder { padding: 50px 0; }
 #content_holder.full-width {
 	margin: 50px 150px;
@@ -93,21 +95,6 @@ Text Domain: hr
 	box-shadow: 0 0 5px #eee;
 }
 #content_holder.full-width p { font-size: 17px; }
-
-/* Full width page bottom bar */
-#bottom-bar > h2 { text-align: center; color: var(--blue-dark); }
-#bottom-bar .pages { display: flex; justify-content: center; margin: 30px 0; }
-#bottom-bar .page {
-	width: 25%;
-	padding: 15px 25px;
-	box-sizing: border-box;
-	float: none;
-	border-radius: 15px;
-	background-color: white;
-	margin: 0 3%;
-}
-#bottom-bar .page h3 { margin-bottom: 5px; }
-#bottom-bar .page hr { margin-bottom: 10px; color: var(--grey); opacity: 0.5; }
 
 /* layout based on two divs equally splitting the space */
 .two-modals { display: flex; background-color: white; }
@@ -124,38 +111,4 @@ Text Domain: hr
 	width: 50%;
 	box-sizing: border-box;
 	padding: 0 70px;
-}
-
-/* Homepage bio and book section */
-#bio { display: flex; flex-direction: column; align-items: center;}
-#bio p { margin-top: 15px; }
-#bio .btn { width: 30%; }
-
-#book .quote p { margin-bottom: 10px; }
-#book-desc-bottom { display: flex; justify-content: space-between; }
-#book img { width: 45%; height: 180px; }
-#book .buttons {
-	display: inline-flex;
-	justify-content: space-between;
-	flex-direction: column;
-	position: relative;
-	bottom: 35px;
-	height: 100px;
-	width: 30%;
-}
-
-/* Homepage testimonials section */
-#testimonials {
-	padding: 50px 0;
-	background-image: url("assets/images/home-body-image.png");
-	background-position: center 40%;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-#testimonials h1 { text-align: center; margin-bottom: 40px;}
-#testimonials .quote { width: 75%; margin: 0 auto; }
-#testimonials .container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 20px;
 }
