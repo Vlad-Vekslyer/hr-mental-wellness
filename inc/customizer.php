@@ -2,19 +2,6 @@
 
 function hr_customize_register( $wp_customize ) {
 
-	// function flourish_lite_child_sanitize_dropdown_pages( $page_id, $setting ) {
-	//   // Ensure $input is an absolute integer.
-	//   $page_id = absint( $page_id );
-	//
-	//   // If $page_id is an ID of a published page, return it; otherwise, return the default.
-	//   return ( 'publish' == get_post_status( $page_id ) ? $page_id : $setting->default );
-	// }
-	//
-	// function flourish_lite_child_sanitize_checkbox( $checked ) {
-	// 	// Boolean check.
-	// 	return ( ( isset( $checked ) && true == $checked ) ? true : false );
-	// }
-
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
@@ -23,13 +10,51 @@ function hr_customize_register( $wp_customize ) {
 		'priority' => null,
 		'capability' => 'edit_theme_options',
 		'theme_supports' => '',
-		'title' => __( 'Theme Options Panel', 'flourish-lite' ),
+		'title' => 'Theme Options Panel', 'flourish-lite',
 	) );
+
+	// Contact Info Options
+	$wp_customize->add_section('contact_info', array(
+		'title' => 'Contact Information',
+		'capability' => 'edit_theme_options',
+		'panel' => 'theme_options'
+	));
+
+	$wp_customize->add_setting('phone', array(
+		'type' => 'theme_mod',
+		'default' => ''
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'phone',
+			array(
+				'label' => 'Phone Number',
+				'section' => 'contact_info'
+			)
+		)
+	);
+
+	$wp_customize->add_setting('address', array(
+		'type' => 'theme_mod',
+		'default' => ''
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'address',
+			array(
+				'label' => 'Address',
+				'section' => 'contact_info'
+			)
+		)
+	);
 
 	//Homepage Options
 	$wp_customize->add_section('hr_hero', array(
-		'title' => __( 'Default Hero Image' ),
-		'description' => __('The default hero image will be used for the homepage'),
+		'title' => 'Homepage Options',
 		'capability' => 'edit_theme_options',
 		'panel' => 'theme_options'
 	));
@@ -44,8 +69,8 @@ function hr_customize_register( $wp_customize ) {
 			$wp_customize,
 			'hr_hero_image',
 			array(
-				'description' => 'Custom Hero Image URL',
-				'label' => __('Hero Image'),
+				'description' => 'The default hero image will be used for the homepage',
+				'label' => 'Hero Image',
 				'section' => 'hr_hero'
 			)
 		)

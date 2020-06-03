@@ -40,4 +40,10 @@ p { margin: 0; padding: 0; }
 header { background-color: white; }
 
 /* FOOTER */
-footer { text-align: center; }
+footer {
+	background-color: var(--blue-dark);
+	text-align: center;
+	color: white;
+}
+
+footer h4 { color: inherit; }
