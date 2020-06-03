@@ -39,8 +39,6 @@ function flourish_lite_child_widgets_init() {
 }
 add_action( 'widgets_init', 'flourish_lite_child_widgets_init' );
 
-// remove_all_actions('wp_head');
-
 // Import and register custom customization options
 require get_stylesheet_directory() . '/inc/customizer.php';
 // Import and register custom widgets

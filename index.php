@@ -33,7 +33,7 @@
   </div>
 </section>
 
-<section id="book-bio">
+<section class="two-modals">
   <div id="book">
     <h1>The Book</h1>
     <div>
@@ -57,6 +57,7 @@
         </div>
     </div>
   </div>
+  <span></span>
   <div id="bio">
     <h1>Dr.Rayes</h1>
     <img src=<?php echo get_theme_file_uri( 'assets/images/rayes-rounded.png' ) ?>>
