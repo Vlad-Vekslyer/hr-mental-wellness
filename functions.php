@@ -94,4 +94,5 @@ require get_stylesheet_directory() . '/inc/customizer.php';
 // Import and register custom widgets
 require get_stylesheet_directory() . '/inc/widgets.php';
 
+add_theme_support( 'post-thumbnails' );
 ?>
