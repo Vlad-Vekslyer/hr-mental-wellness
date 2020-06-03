@@ -6,8 +6,9 @@ function enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 
-// return the hero section description depending on the path
-function hero_desc($uri) {
+// @uri URI path to a page
+// @return array or a string containing text to be displayed in the hero section
+function hero_desc(string $uri) {
   if($uri === '/') {
     return array(
       'top' => get_bloginfo('name'),
@@ -19,12 +20,14 @@ function hero_desc($uri) {
 }
 add_filter('get_hero_desc', 'hero_desc');
 
-// returns the hero section image depending on the post ID
-function page_img($id) {
+// @id is the id of a page
+// @return the path to the appropriate image for the page
+function page_img(int $id) {
   $img_link = wp_get_attachment_url( get_post_thumbnail_id($id));
   if($img_link)
     return $img_link;
   else
+    // returns default image if no image was found specific for the page
     return get_theme_mod('hr_hero_image');
 }
 add_filter('get_page_img', 'page_img');
@@ -39,8 +42,12 @@ function flourish_lite_child_widgets_init() {
 }
 add_action( 'widgets_init', 'flourish_lite_child_widgets_init' );
 
-// queries for pages by tags and return the query object
-function query_by_tags($tags, $postID, $pageNum = 3) {
+// queries pages using tags
+// @tags is an array of tag data
+// @postID is the ID of the current page
+// @pageNum is the max number of pages the query should return
+// @return a WP_Query object containing the queried pages
+function query_by_tags(array $tags, int $postID, int $pageNum = 3) {
   $tag_ids = array();
   foreach($tags as $tag)
     array_push($tag_ids, $tag->term_id);
@@ -55,8 +62,9 @@ function query_by_tags($tags, $postID, $pageNum = 3) {
 }
 add_filter('tag_query', 'query_by_tags', 10, 3);
 
-// prints the markup for the related pages section using a WP_Query object
-function print_related_pages($query) {
+// prints the markup for the related pages section
+// @query will contain the data of the pages
+function print_related_pages(WP_Query $query) {
   echo "<h2>Related Pages</h2>";
   echo "<div class='pages'>";
   // print markup for each individual related page inside the query
