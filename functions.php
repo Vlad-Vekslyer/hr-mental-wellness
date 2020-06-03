@@ -39,6 +39,47 @@ function flourish_lite_child_widgets_init() {
 }
 add_action( 'widgets_init', 'flourish_lite_child_widgets_init' );
 
+function query_by_tags($tags, $postID, $pageNum = 3) {
+  $tag_ids = array();
+  foreach($tags as $tag)
+    array_push($tag_ids, $tag->term_id);
+  $args = array(
+    'post_type' => 'page',
+    'tag__in' => $tag_ids,
+    'post__not_in' => array($postID),
+    'posts_per_page'=> $pageNum
+  );
+  $query = new WP_Query($args);
+  return $query;
+}
+add_filter('tag_query', 'query_by_tags', 10, 3);
+
+function print_related_pages($query) {
+  if($query->have_posts()){
+    echo "<h2>Related Pages</h2>";
+    echo "<div class='pages'>";
+    while($query->have_posts()) {
+      $query->the_post();
+      $content = get_the_content();
+      $content_paragraphs = preg_replace('/<!-- wp:heading -->\s*<h\d>.*<\/h\d>\s*<!-- \/wp:heading -->/i', '', $content);
+      ?>
+
+      <div class="page">
+        <a href=<?= the_permalink(); ?>>
+          <h3><?= the_title(); ?></h3>
+          <hr>
+          <p><?= substr($content_paragraphs, 0, 150); ?>...</p>
+        </a>
+      </div>
+
+      <?php
+    }
+    echo "</div>";
+  }
+  wp_reset_query();
+}
+add_action('related_pages', 'print_related_pages');
+
 // Import and register custom customization options
 require get_stylesheet_directory() . '/inc/customizer.php';
 // Import and register custom widgets
