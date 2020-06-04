@@ -17,6 +17,12 @@
           <a href="#">Email</a>
         </p>
       </div>
+      <div class="newsletter">
+        <h4>Stay Connected</h4>
+        <p>Receive updates about the latest blog posts, webinars and events from HR Mental Wellness</p>
+        <input type="text" name="email" placeholder="Email Address">
+        <button>Subscribe</button>
+      </div>
     </div>
     <div class="copyrigh-wrapper">
   	    <?php bloginfo('name'); ?> © 2020

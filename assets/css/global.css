@@ -33,6 +33,16 @@ h2 { font-size: 34px; }
 h3 { font-size: 30px; }
 h4 { font-size: 22px; }
 
+/* BUTTONS */
+button { font-family: 'Assistant', sans-serif; }
+
+/* FORMS */
+input {
+	font-family: 'Assistant', sans-serif;
+	padding: 5px;
+	border: none;
+}
+
 /* LINKS */
 a { text-decoration: none; }
 
@@ -56,9 +66,10 @@ footer .top {
 	justify-content: space-around;
 	padding-bottom: 15px;
 }
-footer .top > div { display: inline-block; }
+footer .top > div { display: inline-block; width: 25%; }
 footer .contact img { width: 17.5px; height: 17.5px; margin-right: 5px; }
 footer .contact p { display: flex; align-items: center; }
+footer .newsletter p { margin-bottom: 10px; }
 footer a { text-decoration: underline; }
 footer h4 { margin-bottom: 10px; }
 footer h4, footer a { color: inherit; }
