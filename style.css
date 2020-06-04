@@ -68,11 +68,9 @@ Text Domain: hr
 .hero div {
 	position: absolute;
 	top: 150px;
-	width: 1170px;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
-	padding: 0 40px;
 }
 .hero div h1, .hero div h3 { color: white; }
 .hero div h1 { font-size: 50px; }
