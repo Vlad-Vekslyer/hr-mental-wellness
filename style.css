@@ -54,8 +54,8 @@ Text Domain: hr
 .btn a:hover { color: white; }
 
 /* Top and Bottom Widget Wrappers */
-.widget-wrapper { display: flex; justify-content: center; }
-.widget-wrapper > div { width: 360px; margin: 0 15px; }
+.widget-wrapper { display: flex; justify-content: space-between; }
+.widget-wrapper > div { width: 360px; }
 
 /* Top Page Hero */
 .hero {

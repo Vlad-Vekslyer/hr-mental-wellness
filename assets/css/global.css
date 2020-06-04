@@ -63,10 +63,10 @@ footer .top {
 	display: flex;
 	text-align: left;
 	align-items: flex-start;
-	justify-content: space-around;
+	justify-content: space-between;
 	padding-bottom: 15px;
 }
-footer .top > div { display: inline-block; width: 25%; }
+footer .top > div { display: inline-block; width: 22%; }
 footer .contact img { width: 17.5px; height: 17.5px; margin-right: 5px; }
 footer .contact p { display: flex; align-items: center; }
 footer .newsletter p { margin-bottom: 10px; }
