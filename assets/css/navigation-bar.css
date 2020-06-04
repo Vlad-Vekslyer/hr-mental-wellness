@@ -7,7 +7,6 @@
 .navigation_bar .btn a { padding: 10px 25px; }
 
 .sitenav { width: 80%; padding: 0 40px; font-size: 20px; }
-.sitenav ul { list-style: none; padding: 0; }
 .sitenav li { text-align: center; }
 .sitenav a { text-decoration: none; color: var(--grey); display: inline-block; }
 .menu { display: flex; }

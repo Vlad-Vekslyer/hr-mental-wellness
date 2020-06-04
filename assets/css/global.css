@@ -15,6 +15,9 @@ body {
 	font-family: 'Assistant', sans-serif;
 }
 
+/* LISTS */
+ul { padding: 0; list-style: none; margin: 0; }
+
 /* HEADERS */
 h1, h2, h3, h4, h5 , h6 {
 	font-family: 'Assistant', sans-serif;
@@ -44,6 +47,18 @@ footer {
 	background-color: var(--blue-dark);
 	text-align: center;
 	color: white;
+	padding: 15px 0;
 }
-
-footer h4 { color: inherit; }
+footer .top {
+	display: flex;
+	text-align: left;
+	align-items: flex-start;
+	justify-content: space-around;
+	padding-bottom: 15px;
+}
+footer .top > div { display: inline-block; }
+footer .contact img { width: 17.5px; height: 17.5px; margin-right: 5px; }
+footer .contact p { display: flex; align-items: center; }
+footer a { text-decoration: underline; }
+footer h4 { margin-bottom: 10px; }
+footer h4, footer a { color: inherit; }
