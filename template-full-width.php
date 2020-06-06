@@ -7,27 +7,16 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package Flourish Lite
+ * @package HR
  */
 
 get_header(); ?>
 <div class="container">
   <div id="content_holder" class="full-width">
     <?php while( have_posts() ) : the_post(); ?>
-    <div class="entry-content">
-  	  <?php the_content(); ?>
-      <?php
-        wp_link_pages( array(
-        'before' => '<div class="page-links">' . __( 'Pages:', 'flourish-lite' ),
-        'after'  => '</div>',
-        ) );
-      ?>
-     <?php
-        //If comments are open or we have at least one comment, load up the comment template
-        if ( comments_open() || '0' != get_comments_number() )
-            comments_template();
-     ?>
-    </div><!-- entry-content -->
+      <div class="entry-content">
+    	  <?php the_content(); ?>
+      </div><!-- entry-content -->
     <?php endwhile; ?>
   </div><!-- .content_holder -->
   <div id="bottom-bar">
