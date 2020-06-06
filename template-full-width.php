@@ -12,12 +12,9 @@
 
 get_header(); ?>
 <div class="container">
-  <div id="content_holder" class="full-width">
-    <?php while( have_posts() ) : the_post(); ?>
-      <div class="entry-content">
-    	  <?php the_content(); ?>
-      </div><!-- entry-content -->
-    <?php endwhile; ?>
+  <div class="content_holder full-width">
+    <?php the_post(); ?>
+    <?php the_content(); ?>
   </div><!-- .content_holder -->
   <div id="bottom-bar">
     <?php

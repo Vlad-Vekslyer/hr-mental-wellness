@@ -11,15 +11,15 @@
 get_header(); ?>
 
 <div class="container">
-  <div id="content_holder" class="full-width">
-    <?php while( have_posts() ) : the_post(); ?>
-      <div class="entry-content">
-    	  <?php the_content(); ?>
-        <h4>Interested?</h4>
-        <p>Call <?= get_theme_mod('phone'); ?> or <a href="#">Subscribe</a> via our registration form.</p>
-      </div><!-- entry-content -->
-    <?php endwhile; ?>
+  <div class="content_holder full-width">
+    <?php the_post(); ?>
+    <div id="content">
+  	  <?php the_content(); ?>
+    </div><!-- entry-content -->
+    <h4>Interested?</h4>
+    <p>Call <?= get_theme_mod('phone'); ?> or <a href="#">Subscribe</a> via our registration form.</p>
   </div><!-- .content_holder -->
 </div>
+<script src="<?= get_stylesheet_directory_uri() ?>/assets/js/service.js"></script>
 
 <?php get_footer(); ?>

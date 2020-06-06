@@ -85,14 +85,14 @@ Text Domain: hr
 .container { width: 80%; margin: 0 auto; }
 
 /* content_holder */
-#content_holder { padding: 50px 0; }
-#content_holder.full-width {
+.content_holder { padding: 50px 0; }
+.content_holder.full-width {
 	margin: 50px 150px;
 	padding: 40px;
 	background-color: white;
 	box-shadow: 0 0 5px #eee;
 }
-#content_holder.full-width p { font-size: 17px; }
+.content_holder.full-width p { font-size: 17px; }
 
 /* layout based on two divs equally splitting the space */
 .two-modals { display: flex; background-color: white; }
