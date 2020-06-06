@@ -32,7 +32,7 @@ function page_img(int $id) {
 }
 add_filter('get_page_img', 'page_img');
 
-function flourish_lite_child_widgets_init() {
+function hr_widgets_init() {
   register_sidebar(array(
     'name' => 'Top Wrap',
     'id' => 'top-wrap',
@@ -40,7 +40,7 @@ function flourish_lite_child_widgets_init() {
     'after_widget' => '</div>'
   ));
 }
-add_action( 'widgets_init', 'flourish_lite_child_widgets_init' );
+add_action( 'widgets_init', 'hr_widgets_init' );
 
 // queries pages using tags
 // @tags is an array of tag data
