@@ -1,0 +1,20 @@
+.drop-box {
+  width: 75%;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+.drop-box h4 { font-weight: normal; margin: 0; }
+.drop-box h4 span {
+  background-image: url("../icons/arrow.svg");
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  background-position: center center;
+  float: right;
+  position: relative;
+  top: 2px;
+}
+.drop-box h4 span:hover { cursor: pointer; }
+.drop-box .body { height: 0; overflow: hidden; }

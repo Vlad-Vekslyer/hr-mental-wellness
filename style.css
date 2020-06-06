@@ -14,6 +14,7 @@ Text Domain: hr
 @import url("assets/css/navigation-bar.css");
 @import url("assets/css/home.css");
 @import url("assets/css/full-width.css");
+@import url("assets/css/service.css");
 
 /* Modal Link Widget */
 .modal-link {

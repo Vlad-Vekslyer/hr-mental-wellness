@@ -16,6 +16,14 @@ get_header(); ?>
     <div id="content">
   	  <?php the_content(); ?>
     </div><!-- entry-content -->
+    <!-- <div class="drop-box">
+      <h4>Lorem ipsum <span></span></h4>
+      <div class="body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div> -->
     <h4>Interested?</h4>
     <p>Call <?= get_theme_mod('phone'); ?> or <a href="#">Subscribe</a> via our registration form.</p>
   </div><!-- .content_holder -->
