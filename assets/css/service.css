@@ -5,6 +5,7 @@
   padding: 10px 15px;
   margin-bottom: 20px;
 }
+.drop-box:hover { cursor: pointer; }
 .drop-box h4 { font-weight: normal; margin: 0; }
 .drop-box h4 span {
   background-image: url("../icons/arrow.svg");
@@ -18,7 +19,8 @@
   transform: rotate(0deg);
   transition: transform 300ms;
 }
-.drop-box h4 span:hover { cursor: pointer; }
-.drop-box .body { max-height: 300px; overflow: hidden; transition: max-height 500ms; }
+.drop-box .body { max-height: 600px; overflow: hidden; transition: max-height 500ms; }
+.drop-box .body p:first-child { padding-top: 20px; }
+.drop-box .body p { padding-bottom: 10px; }
 .drop-box.hidden .body { max-height: 0; }
 .drop-box.hidden h4 span { transform: rotate(180deg); }

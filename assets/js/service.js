@@ -35,7 +35,28 @@ function emptyContent(element, tag) {
   }
 }
 
+function dropBoxClick() {
+  this.classList.toggle('hidden');
+}
+
+function createContent(container, headers, bodies) {
+  headers.forEach((header, index) => {
+    let dropBox = document.createElement('DIV');
+    dropBox.classList.add('drop-box', 'hidden');
+    dropBox.innerHTML += `<h4>${header} <span></span></h4>`;
+    let dropBoxBody = document.createElement('DIV');
+    dropBoxBody.classList.add('body');
+    let htmlString = '';
+    bodies[index].forEach(paragraph => htmlString+= `<p>${paragraph}</p>`);
+    dropBoxBody.innerHTML = htmlString;
+    dropBox.appendChild(dropBoxBody);
+    dropBox.addEventListener('click', dropBoxClick);
+    container.appendChild(dropBox);
+  })
+}
+
 const content = document.getElementById('content');
 const headers = getTextByTags(content, 'h4');
 const bodies = getTextBetweenTags(content, 'h4');
 emptyContent(content, 'h4');
+createContent(content, headers, bodies);
