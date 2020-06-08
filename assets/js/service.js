@@ -1,3 +1,7 @@
+// gets text inside of an element's children
+// @element is the element that is being searched for text
+// @tag specifies what type of child elements should the text be retreived from
+// @return a string array containing the text that was found
 function getTextByTags(element, tag) {
   let text = [];
   for(let i = 0; i < element.children.length; i++) {
@@ -7,6 +11,10 @@ function getTextByTags(element, tag) {
   return text;
 }
 
+// gets text inside of an element's children that are between the specified tags
+// @element is the element that is being searched for text
+// @tag specifies between what type of elements should the text be searched for
+// @return a 2D array with each item in the list being a list of text that was in between each pair of tags
 function getTextBetweenTags(element, tag) {
   let text = [];
   for(let i = 0; i < element.children.length; i++ ) {
@@ -14,6 +22,7 @@ function getTextBetweenTags(element, tag) {
     if(child.nodeName === tag.toUpperCase()) {
       let currentElem = child.nextSibling;
       text.push([]);
+      // loop through all the children inside of currentElem and append the text inside to text[text.length - 1]
       while(currentElem !== null && currentElem.nodeName !== tag.toUpperCase()) {
         if(currentElem.innerText) text[text.length - 1].push(currentElem.innerText);
         currentElem = currentElem.nextSibling;
@@ -23,6 +32,9 @@ function getTextBetweenTags(element, tag) {
   return text;
 }
 
+// delete an element's childred past the first appeareance of the specified tag
+// @element is the element whose children are being deleted
+// @tag specifies past which tag should children start being deleted
 function emptyContent(element, tag) {
   let passedHeader = false;
   for(let i = 0; i < element.children.length; i ++) {
@@ -39,6 +51,9 @@ function dropBoxClick() {
   this.classList.toggle('hidden');
 }
 
+// renders drop boxes inside of the container element
+// @headers string array of headers whereas each header belongs to a single drop-box
+// @bodies 2D string array whereas each list in the array is a list of paragraphs inside of a single drop-box
 function createContent(container, headers, bodies) {
   headers.forEach((header, index) => {
     let dropBox = document.createElement('DIV');
