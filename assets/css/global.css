@@ -15,6 +15,14 @@ body {
 	font-family: 'Assistant', sans-serif;
 }
 
+/* BLOCK QUOTES */
+blockquote {
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+blockquote cite { display: inline-block; margin-top: 5px; }
+
 /* LISTS */
 ul { padding: 0; list-style: none; margin: 0; }
 
