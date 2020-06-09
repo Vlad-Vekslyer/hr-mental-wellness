@@ -70,8 +70,28 @@ function createContent(container, headers, bodies) {
   })
 }
 
+function removeByHeader(element, tag, header) {
+  let response = '';
+  for(let i = element.children.length - 1; i >= 0; i--) {
+    const child = element.children.item(i);
+    if(child.nodeName === tag.toUpperCase() && child.innerText === header) {
+      let currentElem = child;
+      do {
+        let nextSibling = currentElem.nextSibling;
+        response += currentElem.outerHTML ? currentElem.outerHTML : '';
+        element.removeChild(currentElem);
+        currentElem = nextSibling;
+      } while(currentElem);
+      break;
+    }
+  }
+  return response;
+}
+
 const content = document.getElementById('content');
+const testimonials = removeByHeader(content, 'h4', 'Testimonials');
 const headers = getTextByTags(content, 'h4');
 const bodies = getTextBetweenTags(content, 'h4');
 emptyContent(content, 'h4');
 createContent(content, headers, bodies);
+content.innerHTML += testimonials;
