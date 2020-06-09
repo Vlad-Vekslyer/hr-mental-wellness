@@ -53,15 +53,47 @@ function hr_customize_register( $wp_customize ) {
 	);
 
 	//Homepage Options
-	$wp_customize->add_section('hr_hero', array(
+	$wp_customize->add_section('hr_homepage', array(
 		'title' => 'Homepage Options',
 		'capability' => 'edit_theme_options',
 		'panel' => 'theme_options'
 	));
 
+	$wp_customize->add_setting('rayes_link', array(
+		'type' => 'theme_mod',
+		'default' => ''
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'rayes_link',
+			array(
+				'label' => 'Dr.Rayes Page Link',
+				'section' => 'hr_homepage'
+			)
+		)
+	);
+
+	$wp_customize->add_setting('book_link', array(
+		'type' => 'theme_mod',
+		'default' => ''
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'book_link',
+			array(
+				'label' => 'Book Page Link',
+				'section' => 'hr_homepage'
+			)
+		)
+	);
+
 	$wp_customize->add_setting('hr_hero_image', array(
 		'type' => 'theme_mod',
-		'default' => '',
+		'default' => ''
 	));
 
 	$wp_customize->add_control(
@@ -71,7 +103,7 @@ function hr_customize_register( $wp_customize ) {
 			array(
 				'description' => 'The default hero image will be used for the homepage',
 				'label' => 'Hero Image',
-				'section' => 'hr_hero'
+				'section' => 'hr_homepage'
 			)
 		)
 	);

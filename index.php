@@ -50,7 +50,7 @@
         <div id="book-desc-bottom">
           <img src=<?php echo get_theme_file_uri( 'assets/images/book.png' ) ?>>
           <div class="buttons">
-            <button class="btn"><a href="#">Read More</a></button>
+            <button class="btn"><a href=<?= get_theme_mod('book_link'); ?>>Read More</a></button>
             <button class="btn"><a href="#">Order Now</a></button>
           </div>
         </div>
@@ -65,7 +65,7 @@
       Dr. El-Rayes was inspired to establish the H.R. Mental Wellness Center in order to share his personal and professional experience,
       as well as his training as a coach and group facilitator.
     </p>
-    <button class="btn"><a href="#">Read More</a></button>
+    <button class="btn"><a href=<?= get_theme_mod('rayes_link'); ?>>Read More</a></button>
   </div>
 </section>
 
