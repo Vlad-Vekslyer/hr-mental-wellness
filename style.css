@@ -129,9 +129,11 @@ Text Domain: hr
 	.hero div h1 { font-size: 42px; }
 
 	.navigation_bar .btn a { padding: 7.5px 5px; }
+	.sitenav { font-size: 18px; }
+
 	.btn a { padding: 7.5px 5px; }
 	.modal-link { height: 280px; }
-	.widget-wrapper > div { width: 300px; }
+	.widget-wrapper > div { width: 280px; }
 
 	.quote p:first-of-type { font-size: 1em; }
 
