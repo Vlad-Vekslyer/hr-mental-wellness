@@ -31,3 +31,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+
+@media only screen and (max-width: 950px) {
+	#book .buttons { height: 75px; bottom: 0; }
+}

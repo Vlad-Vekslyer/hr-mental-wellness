@@ -25,7 +25,7 @@ Text Domain: hr
 }
 .modal-link h4, .modal-link p, .modal-link button { position: absolute; }
 .modal-link h4, .modal-link p { width: 70%; left: 50%; transform: translateX(-50%); }
-.modal-link h4{ top: 40px; color: #4F95E1; text-transform: uppercase; }
+.modal-link h4 { top: 40px; color: #4F95E1; text-transform: uppercase; }
 .modal-link p { top: 80px; color: #c0c0c0; }
 .modal-link button { bottom: 20px; left: 15%; }
 .modal-link a { color: white; }
@@ -129,7 +129,8 @@ Text Domain: hr
 	.hero div h1 { font-size: 42px; }
 
 	.navigation_bar .btn a { padding: 7.5px 5px; }
-	.sitenav { font-size: 18px; }
+	.navigation_bar > img { width: 15%; }
+	.sitenav { font-size: 18px; padding: 0 20px; width: 70%; }
 
 	.btn a { padding: 7.5px 5px; }
 	.modal-link { height: 280px; }
@@ -138,4 +139,20 @@ Text Domain: hr
 	.quote p:first-of-type { font-size: 1em; }
 
 	.two-modals > div { padding: 0 35px; }
+}
+
+@media only screen and (max-width: 950px) {
+	.hero { height: 250px; }
+	.hero div h1 { font-size: 38px; }
+	.hero div h3 { width: 65%; }
+
+	.modal-link { height: 260px; }
+	.modal-link h4, .modal-link p { width: 85%; }
+	.modal-link h4 { top: 20px; }
+	.modal-link p { top: 60px; }
+	.modal-link button { width: 90%; bottom: 30px; left: 5%; }
+	.widget-wrapper > div { width: 260px; }
+
+	.container { width: 95%; }
+	.two-modals > div { padding: 0 20px; }
 }
