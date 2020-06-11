@@ -51,7 +51,7 @@
           <img src=<?php echo get_theme_file_uri( 'assets/images/book.png' ) ?>>
           <div class="buttons">
             <button class="btn"><a href=<?= get_theme_mod('book_link'); ?>>Read More</a></button>
-            <button class="btn"><a href="#">Order Now</a></button>
+            <button class="btn"><a href="#">Order</a></button>
           </div>
         </div>
     </div>

@@ -44,6 +44,7 @@ Text Domain: hr
 	font-size: 1em;
 	text-transform: uppercase;
 	box-sizing: border-box;
+	padding: 0;
 }
 .btn a {
 	color: white;
@@ -114,6 +115,8 @@ Text Domain: hr
 
 @media only screen and (max-width: 1370px) {
 	.navigation_bar .btn a { padding: 7.5px 15px; }
+	.menu > li { margin: 18px 1%; }
+
   .btn a { padding: 7.5px 15px; }
 
 	.widget-wrapper > div { width: 320px; }
@@ -128,9 +131,11 @@ Text Domain: hr
 	.hero div { top: 100px; }
 	.hero div h1 { font-size: 42px; }
 
-	.navigation_bar .btn a { padding: 7.5px 5px; }
-	.navigation_bar > img { width: 15%; }
-	.sitenav { font-size: 18px; padding: 0 20px; width: 70%; }
+	.navigation_bar { justify-content: space-between; }
+	.navigation_bar .btn a { padding: 8px 20px; }
+	.navigation_bar > img { display: none; }
+	.sitenav { font-size: 18px; padding: 0; width: 85%; }
+	.sub-menu { top: 40px; }
 
 	.btn a { padding: 7.5px 5px; }
 	.modal-link { height: 280px; }
@@ -155,4 +160,16 @@ Text Domain: hr
 
 	.container { width: 95%; }
 	.two-modals > div { padding: 0 20px; }
+}
+
+@media only screen and (max-width: 825px) {
+	.hero { height: 200px; }
+	.hero div { top: 60px; }
+
+	.modal-link { height: 260px; }
+	.modal-link:nth-of-type(2) { display: none; }
+	.modal-link p { font-size: 1em; }
+	.widget-wrapper > div { width: 340px; }
+
+	.content_holder { padding: 30px 0; }
 }
