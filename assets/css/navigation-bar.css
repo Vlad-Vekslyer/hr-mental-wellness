@@ -9,6 +9,7 @@
 .sitenav { width: 80%; padding: 0 5px; font-size: 20px; }
 .sitenav li { text-align: center; }
 .sitenav a { text-decoration: none; color: var(--grey); display: inline-block; }
+
 .menu { display: flex; }
 .menu > li {
 	margin: 18px 3.5%;
@@ -19,6 +20,7 @@
 .menu > li:hover { border-color: var(--blue-light); }
 .menu > li > a { padding: 0 40px 15px 40px; }
 .menu > li:hover .sub-menu { display: inline-block; }
+
 .sub-menu {
 	display: none;
 	background-color: white;
@@ -32,13 +34,24 @@
 .sub-menu a { padding: 10px 15px; }
 .sub-menu li:hover { background-color: rgba(0,0,0,0.05); }
 
+.hamburger {
+	width: 30px;
+	border: none;
+	background-color: white;
+	padding: 0;
+	display: none;
+}
+.hamburger:hover { cursor: pointer; }
+.hamburger hr { border-color: var(--blue-dark); background-color: var(--blue-dark); height: 3.5px; }
+
 @media only screen and (max-width: 1370px) {
 	.navigation_bar .btn a { padding: 7.5px 15px; }
 	.menu > li { margin: 18px 1%; }
 }
 
 @media only screen and (max-width: 1080px) {
-	
+	.sitenav li, .navigation_bar .btn { display: none; }
+	.hamburger { display: inline-block; }
 }
 
 @media only screen and (max-width: 950px) {

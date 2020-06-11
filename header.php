@@ -24,6 +24,11 @@
 		    <?php wp_nav_menu(); ?>
 		 </div><!--.sitenav -->
 		 <button class="btn"><a href="#">Get Help</a></button>
+		 <button class="hamburger">
+			 <hr>
+			 <hr>
+			 <hr>
+		 </button>
    </div><!--.navigation_bar -->
 </header><!--.site-header -->
 
