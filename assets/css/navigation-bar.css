@@ -6,7 +6,7 @@
 }
 .navigation_bar .btn a { padding: 10px 25px; }
 
-.sitenav { width: 80%; padding: 0 40px; font-size: 20px; }
+.sitenav { width: 80%; padding: 0 5px; font-size: 20px; }
 .sitenav li { text-align: center; }
 .sitenav a { text-decoration: none; color: var(--grey); display: inline-block; }
 .menu { display: flex; }
@@ -31,3 +31,16 @@
 }
 .sub-menu a { padding: 10px 15px; }
 .sub-menu li:hover { background-color: rgba(0,0,0,0.05); }
+
+@media only screen and (max-width: 1370px) {
+	.navigation_bar .btn a { padding: 7.5px 15px; }
+	.menu > li { margin: 18px 1%; }
+}
+
+@media only screen and (max-width: 1080px) {
+	
+}
+
+@media only screen and (max-width: 950px) {
+
+}
