@@ -50,7 +50,9 @@
 }
 
 @media only screen and (max-width: 1080px) {
-	.sitenav li, .navigation_bar .btn { display: none; }
+	.navigation_bar img { width: 130px; }
+	.navigation_bar { justify-content: space-between; }
+	.sitenav, .navigation_bar .btn { display: none; }
 	.hamburger { display: inline-block; }
 }
 
