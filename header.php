@@ -29,6 +29,10 @@
 			 <hr>
 			 <hr>
 		 </button>
+		 <?php wp_nav_menu(array(
+			 'menu_class' => 'mobile-menu',
+			 'container' => ''
+		 )); ?>
    </div><!--.navigation_bar -->
 </header><!--.site-header -->
 

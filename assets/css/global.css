@@ -58,7 +58,7 @@ a { text-decoration: none; }
 p { margin: 0; padding: 0; }
 
 /* HEADER */
-header { background-color: white; }
+header { background-color: white; position: relative; }
 
 /* FOOTER */
 footer {
