@@ -36,6 +36,6 @@
 </footer><!--end #site-footer-->
 </div><!--#end sitelayout-->
 <?php wp_footer(); ?>
-<script src="<?= get_stylesheet_directory_uri() ?>/assets/js/header.js"></script>
+<script src="<?= get_stylesheet_directory_uri() ?>/assets/js/mobile-nav.js"></script>
 </body>
 </html>

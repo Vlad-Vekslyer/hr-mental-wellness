@@ -43,7 +43,7 @@
 	top: 0;
 	background-color: white;
 	z-index: 1;
-	transition: right 350ms;
+	transition: right 350ms ease-out;
 	box-shadow: 0 5px 5px rgba(0,0,0,0.2);
 }
 .mobile-sitenav.show { right: 0; }
@@ -60,6 +60,7 @@
 	left: 180px;
 	top: 30px;
 }
+.mobile-menu .sub-menu.show { display: inline-block; }
 .mobile-menu .sub-menu li { padding-bottom: 20px; }
 .mobile-menu > li { padding: 10px 0; width: 30%; border-right: 2px solid rgba(125,125,125,0.15); }
 .hamburger {
