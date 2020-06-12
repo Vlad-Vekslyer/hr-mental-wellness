@@ -29,10 +29,13 @@
 			 <hr>
 			 <hr>
 		 </button>
-		 <?php wp_nav_menu(array(
-			 'menu_class' => 'mobile-menu',
-			 'container' => ''
-		 )); ?>
+		 <div class="mobile-sitenav">
+			 <button>X</button>
+			 <?php wp_nav_menu(array(
+				 'menu_class' => 'mobile-menu',
+				 'container' => ''
+			 )); ?>
+		 </div>
    </div><!--.navigation_bar -->
 </header><!--.site-header -->
 

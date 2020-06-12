@@ -34,17 +34,26 @@
 .menu .sub-menu a { padding: 10px 15px; }
 .menu .sub-menu li:hover { background-color: rgba(0,0,0,0.05); }
 
-/* .mobile-sitenav { display: none; } */
-.mobile-sitenav.show { display: inline-block; }
-.mobile-menu {
-	padding: 10px 15px;
+.mobile-sitenav {
+	font-size: 22px;
+	padding: 20px 25px;
+	width: 400px;
 	position: absolute;
-	right: 0;
+	right: -400px;
 	top: 0;
 	background-color: white;
 	z-index: 1;
+	transition: right 350ms;
 }
-
+.mobile-sitenav.show { right: 0; }
+.mobile-sitenav > button {
+	position: absolute;
+	right: 25px;
+	border:none;
+	background-color: inherit;
+}
+.mobile-menu .sub-menu { display: none; }
+.mobile-menu > li { padding: 10px 0; }
 .hamburger {
 	width: 30px;
 	border: none;
@@ -52,7 +61,6 @@
 	padding: 0;
 	display: none;
 }
-.hamburger:hover { cursor: pointer; }
 .hamburger hr { border-color: var(--blue-dark); background-color: var(--blue-dark); height: 3.5px; }
 
 @media only screen and (max-width: 1370px) {

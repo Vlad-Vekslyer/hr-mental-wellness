@@ -43,6 +43,7 @@ h4 { font-size: 22px; }
 
 /* BUTTONS */
 button { font-family: 'Assistant', sans-serif; }
+button:hover { cursor: pointer; }
 
 /* FORMS */
 input {
