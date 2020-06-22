@@ -1,5 +1,5 @@
 .drop-box {
-  width: 75%;
+  width: 80%;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border: 1px solid rgba(0,0,0,0.1);
   padding: 10px 15px;
@@ -21,6 +21,6 @@
 }
 .drop-box .body { max-height: 600px; overflow: hidden; transition: max-height 500ms; }
 .drop-box .body p:first-child { padding-top: 20px; }
-.drop-box .body p { padding-bottom: 10px; }
+.drop-box .body p { padding-bottom: 20px; }
 .drop-box.hidden .body { max-height: 0; }
 .drop-box.hidden h4 span { transform: rotate(180deg); }
