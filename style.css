@@ -179,3 +179,10 @@ Text Domain: hr
 	.two-modals > div { width: 100%; padding: 0 60px; }
 	.quote p:first-of-type { font-size: 1em; }
 }
+
+@media only screen and (max-width: 700px) {
+	.hero { height: 150px; }
+	.hero div { top: 30px; }
+	.hero div h1 { font-size: 30px; }
+	.hero div h3 { width: 80%; }
+}

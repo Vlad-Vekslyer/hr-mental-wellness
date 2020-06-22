@@ -17,12 +17,20 @@
 }
 
 /* testimonials section */
-#testimonials {
-	padding: 50px 0;
+#testimonials { position: relative; padding: 50px 0; }
+#testimonials:after {
+	content: "";
 	background-image: url("../images/home-body-image.png");
 	background-position: center 40%;
 	background-repeat: no-repeat;
 	background-size: cover;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
 }
 #testimonials h1 { text-align: center; margin-bottom: 40px;}
 #testimonials .quote { width: 40%; margin-bottom: 10px;}
@@ -42,6 +50,12 @@
 
 	#book img { width: 30%; }
 	#book .buttons { bottom: -30px; }
+	#book .quote { display: none; }
 
 	#bio { margin-bottom: 20px; }
+}
+
+@media only screen and (max-width: 700px) {
+
+	#testimonials .quote { width: 100%; margin-bottom: 20px; }
 }
