@@ -48,7 +48,7 @@
 	#testimonials { padding: 25px 0; }
 	#testimonials h1 { margin-bottom: 20px; }
 
-	#book img { width: 30%; }
+	#book img { width: 200px; }
 	#book .buttons { bottom: -30px; }
 	#book .quote { display: none; }
 
@@ -56,6 +56,5 @@
 }
 
 @media only screen and (max-width: 700px) {
-
 	#testimonials .quote { width: 100%; margin-bottom: 20px; }
 }

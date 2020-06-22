@@ -1,0 +1,14 @@
+Desktop
+-------
+1370px
+1215px
+1080px
+950px
+
+Tablet
+------
+825px
+700px
+
+Mobile
+------
