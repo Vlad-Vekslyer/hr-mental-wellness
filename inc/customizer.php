@@ -59,6 +59,43 @@ function hr_customize_register( $wp_customize ) {
 		'panel' => 'theme_options'
 	));
 
+	$wp_customize->add_setting('book_description', array(
+		'type' => 'theme_mod',
+		'default' => ''
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'book_description',
+			array(
+				'label' => 'Book Description',
+				'description' => 'The text body for the book section',
+				'section' => 'hr_homepage',
+				'type' => 'textarea'
+			)
+		)
+	);
+
+	$wp_customize->add_setting('rayes_description', array(
+		'type' => 'theme_mod',
+		'default' => ''
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'rayes_description',
+			array(
+				'label' => 'Rayes Description',
+				'description' => 'The text body for the Dr.Rayes section',
+				'section' => 'hr_homepage',
+				'type' => 'textarea'
+			)
+		)
+	);
+
+	// rayes link refers to the page that contains information about dr.rayes
 	$wp_customize->add_setting('rayes_link', array(
 		'type' => 'theme_mod',
 		'default' => ''
@@ -75,6 +112,7 @@ function hr_customize_register( $wp_customize ) {
 		)
 	);
 
+	// book link refers to the page that contains information about the book
 	$wp_customize->add_setting('book_link', array(
 		'type' => 'theme_mod',
 		'default' => ''

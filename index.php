@@ -37,11 +37,7 @@
     <h1>The Book</h1>
     <div>
         <div id="book-desc">
-          <p>
-            This book presents a program to help you build a foundation for your healing.
-            With a focus on how to achieve optimal mental wellness—to heal from depression, anxiety and addictions.
-            Learn how to discover your talents and gifts, and put yourself on the path to self-actualization to become the very best you.
-          </p>
+          <p><?= get_theme_mod('book_description'); ?></p>
           <div class="quote">
             <p>“I highly recommend this book for anyone seeking life purpose, meaning, and self-transcendence”</p>
             <p>-Samir Abdel, MD</p>
@@ -60,11 +56,7 @@
   <div id="bio">
     <h1>Dr.Rayes</h1>
     <img src=<?php echo get_theme_file_uri( 'assets/images/rayes-rounded.png' ) ?>>
-    <p>
-      After suffering from depression and finding his own way to healing,
-      Dr. El-Rayes was inspired to establish the H.R. Mental Wellness Center in order to share his personal and professional experience,
-      as well as his training as a coach and group facilitator.
-    </p>
+    <p><?= get_theme_mod('rayes_description'); ?></p>
     <button class="btn"><a href=<?= get_theme_mod('rayes_link'); ?>>Read More</a></button>
   </div>
 </section>
