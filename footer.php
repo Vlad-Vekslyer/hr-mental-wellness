@@ -25,7 +25,8 @@
         <h4>Explore</h4>
         <?php wp_nav_menu(array(
           'menu_class' => 'footer-menu',
-          'container' => ''
+          'container' => '',
+          'depth' => 1
         )); ?>
       </div>
     </div>
