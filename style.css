@@ -25,7 +25,12 @@ Text Domain: hr
 }
 .modal-link h4, .modal-link p, .modal-link button { position: absolute; }
 .modal-link h4, .modal-link p { width: 70%; left: 50%; transform: translateX(-50%); }
-.modal-link h4 { top: 40px; color: #4F95E1; text-transform: uppercase; }
+.modal-link h4 {
+	top: 40px;
+	color: #4F95E1;
+	text-transform: uppercase;
+	font-size: 22px;
+}
 .modal-link p { top: 80px; color: #c0c0c0; }
 .modal-link button { bottom: 20px; left: 15%; }
 .modal-link a { color: white; }
@@ -158,7 +163,6 @@ Text Domain: hr
 
 	.modal-link { height: 280px; margin: 10px 0; }
 	.modal-link p { font-size: 1em; top: 80px; }
-	.modal-link h4, .modal-link p { width: 85%; }
 	.modal-link h4 { top: 40px; }
 	.modal-link h4, .modal-link p { width: 70%; }
 	.modal-link button { width: 70%; bottom: 30px; left: 15%; }
@@ -185,4 +189,14 @@ Text Domain: hr
 	.hero div { top: 30px; }
 	.hero div h1 { font-size: 30px; }
 	.hero div h3 { width: 80%; }
+}
+
+@media only screen and (max-width: 550px) {
+	.hero { text-align: center; }
+	.hero div { top: 20px; }
+	.hero div h1 { font-size: 28px; }
+	.hero div h3 { margin: 0 auto; width: 90%; }
+	.hero > img { height: inherit; }
+
+	.two-modals > div { padding: 0; width: 95%; margin: 0 auto; }
 }
