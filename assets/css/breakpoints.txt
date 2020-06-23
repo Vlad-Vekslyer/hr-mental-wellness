@@ -13,3 +13,4 @@ Tablet
 Mobile
 ------
 550px
+440px

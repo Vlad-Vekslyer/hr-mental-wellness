@@ -87,7 +87,6 @@ footer .newsletter p { margin-bottom: 10px; }
 	h2 { font-size: 32px; }
 	h3 { font-size: 28px; }
 	h4 { font-size: 20px; }
-	p { font-size: 0.9em; }
 }
 
 @media only screen and (max-width: 950px) {
@@ -100,24 +99,25 @@ footer .newsletter p { margin-bottom: 10px; }
 @media only screen and (max-width: 825px) {
 	footer .newsletter {
 		grid-area: newsletter;
-		text-align: center;
 		display: flex;
 		flex-direction: column;
 		width: 60%;
-		margin: 0 auto;
 	}
-	footer .newsletter button { width: 35%; align-self: center; margin-top: 10px; }
-	footer .book { grid-area: book; text-align: center; }
+	footer .book { grid-area: book; width: 90%; }
+	footer .newsletter, footer .book { text-align: center; margin: 0 auto; }
 	footer .contact { grid-area: contact; }
 	footer .explore { grid-area: explore; }
 	footer .top {
-		grid-gap: 20px;
+		grid-row-gap: 30px;
+		grid-column-gap: 20px;
 		grid-template-columns: 1fr 1fr;
 		grid-template-areas: 'explore contact'
 												 'book book'
 												 'newsletter newsletter'
 	}
+	footer .newsletter button { width: 35%; align-self: center; margin-top: 10px; }
 	footer .top h4 { margin-bottom: 5px; }
+	footer .contact img { display: none; }
 }
 
 @media only screen and (max-width: 700px) {
@@ -132,4 +132,10 @@ footer .newsletter p { margin-bottom: 10px; }
 	h2 { font-size: 26px; }
 	h3 { font-size: 22px; }
 	h4 { font-size: 16px; }
+}
+
+@media only screen and (max-width: 440px) {
+	p { font-size: 0.9em; }
+	footer .book { width: 100%; }
+	footer .newsletter { width: 80%; }
 }
