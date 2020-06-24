@@ -6,16 +6,19 @@
   margin-bottom: 20px;
 }
 .drop-box:hover { cursor: pointer; }
-.drop-box h4 { font-weight: normal; margin: 0; }
+.drop-box h4 {
+  font-weight: normal;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .drop-box h4 span {
   background-image: url("../icons/arrow.svg");
   width: 25px;
   height: 25px;
   display: inline-block;
   background-position: center center;
-  float: right;
-  position: relative;
-  top: 2px;
   transform: rotate(0deg);
   transition: transform 300ms;
 }
@@ -24,3 +27,7 @@
 .drop-box .body p { padding-bottom: 20px; }
 .drop-box.hidden .body { max-height: 0; }
 .drop-box.hidden h4 span { transform: rotate(180deg); }
+
+@media only screen and (max-width: 700px) {
+  .drop-box { width: 100%; }
+}

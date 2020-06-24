@@ -4,7 +4,7 @@
 	background-color: white;
 	box-shadow: 0 0 5px #eee;
 }
-.content_holder.full-width p { font-size: 17px; margin-bottom: 15px; }
+.content_holder.full-width p { margin-bottom: 15px; }
 
 #bottom-bar > h2 { text-align: center; color: var(--blue-dark); }
 #bottom-bar .pages { display: flex; justify-content: center; margin: 30px 0; }
