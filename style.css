@@ -82,7 +82,7 @@ Text Domain: hr
 .hero div h1, .hero div h3 { color: white; }
 .hero div h1 { font-size: 50px; }
 .hero div h3 { font-weight: normal; width: 50%; }
-.hero .reg-page h1 { text-align: center; font-size: 75px; }
+.hero .single h1 { text-align: center; font-size: 75px; }
 
 /* Quotes */
 .quote p:first-of-type { font-size: 1.1em; margin-bottom: 10px;}
@@ -93,13 +93,6 @@ Text Domain: hr
 
 /* content_holder */
 .content_holder { padding: 50px 0; }
-.content_holder.full-width {
-	margin: 50px 150px;
-	padding: 40px;
-	background-color: white;
-	box-shadow: 0 0 5px #eee;
-}
-.content_holder.full-width p { font-size: 17px; }
 
 /* layout based on two divs equally splitting the space */
 .two-modals { display: flex; background-color: white; }
@@ -162,6 +155,7 @@ Text Domain: hr
 
 	.hero { height: 200px; }
 	.hero div { top: 60px; }
+	.hero .single h1 { font-size: 65px; }
 
 	.modal-link { height: 280px; margin: 10px 0; }
 	.modal-link p { font-size: 1em; top: 80px; }
@@ -191,6 +185,7 @@ Text Domain: hr
 	.hero div { top: 30px; }
 	.hero div h1 { font-size: 30px; }
 	.hero div h3 { width: 80%; }
+	.hero .single { top: 40px; }
 }
 
 @media only screen and (max-width: 550px) {
@@ -199,6 +194,8 @@ Text Domain: hr
 	.hero div h1 { font-size: 28px; }
 	.hero div h3 { margin: 0 auto; width: 90%; }
 	.hero > img { height: inherit; }
+	.hero .single { top: 50px; }
+	.hero .single h1 { font-size: 55px; }
 
 	.two-modals > div { padding: 0; width: 85%; margin: 0 auto; }
 }

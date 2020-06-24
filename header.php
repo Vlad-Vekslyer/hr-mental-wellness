@@ -41,7 +41,7 @@
 
 <div class="hero">
 	<img width="100%" src=<?= apply_filters('get_page_img', $post->ID) ?>>
-	<div class=<?= $post->ID !== 1 ? "reg-page" : "container" ?>>
+	<div class="<?= $post->ID !== 1 ? "single" : '' ?> container">
 		<?php
 			// Get the text that should go into the page's hero section
 			$desc = apply_filters('get_hero_desc', $_SERVER['REQUEST_URI']);
