@@ -1,7 +1,7 @@
 <?php
 
 function enqueue_styles() {
-   wp_enqueue_style( 'style',  '/wp-content/themes/hr/style.css' );
+   wp_enqueue_style('style', '/wp-content/themes/hr/style.css');
    wp_enqueue_style('font', 'https://fonts.googleapis.com/css?family=Assistant%3A300%2C400%2C600%2C800&#038;ver=5.4.1');
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
