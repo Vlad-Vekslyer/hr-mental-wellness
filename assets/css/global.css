@@ -15,6 +15,10 @@ body {
 	font-family: 'Assistant', sans-serif;
 }
 
+body, html {
+	overflow-x: hidden;
+}
+
 /* BLOCK QUOTES */
 blockquote {
 	margin: 0;
