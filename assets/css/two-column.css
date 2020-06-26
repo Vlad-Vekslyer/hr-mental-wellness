@@ -1,1 +1,14 @@
 .content-holder.two-column { width: 60%; margin: 50px 0; }
+
+.post-preview { }
+.post-preview a { font-size: 1.1em; font-weight: 600;}
+.post-preview h2 { margin-bottom: 0; }
+.post-preview h5 { color: #656565; margin: 0; }
+.post-preview > h5 { margin-bottom: 10px; }
+.post-preview .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.post-preview .bottom .categories { display: inline-flex; }

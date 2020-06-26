@@ -96,7 +96,7 @@ Text Domain: hr
 .content-holder {
 	background-color: white;
 	box-shadow: 0 0 5px #eee;
-	padding: 40px;
+	padding: 30px 40px;
 }
 
 /* layout based on two divs equally splitting the space */

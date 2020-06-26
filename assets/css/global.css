@@ -62,7 +62,7 @@ input {
 }
 
 /* LINKS */
-a { text-decoration: none; }
+a { text-decoration: none; color: var(--blue-dark); }
 
 /* PARAGRAPHS */
 p { margin: 0; padding: 0; }

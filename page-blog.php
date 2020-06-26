@@ -14,17 +14,20 @@ get_header(); ?>
 
         <div class="post-preview">
           <h2><?= the_title(); ?></h2>
-          <ul class="categories">
-            <?php
-              foreach($categories as $category) {
-                $name = $category->to_array()['name'];
-                echo "<li>$name</li>";
-              }
-            ?>
-          </ul>
-          <hr>
+          <h5><?= the_date("M d, Y"); ?></h5>
           <p><?= substr(get_the_content(), 0, 300); ?>...</p>
-          <a href=<?= the_permalink(); ?>>Read More</a>
+          <div class="bottom">
+            <a href=<?= the_permalink(); ?>>Read More</a>
+            <ul class="categories">
+              <?php
+                foreach($categories as $index => $category) {
+                  $name = $category->to_array()['name'];
+                  $suffix = $index !== sizeof($categories) - 1 ? "&nbsp•&nbsp" : '';
+                  echo "<li><h5>$name$suffix</h5></li>";
+                }
+              ?>
+            </ul>
+          </div>
         </div>
 
         <?php
