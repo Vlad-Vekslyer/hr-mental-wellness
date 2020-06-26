@@ -1,6 +1,6 @@
 <?php
 get_header(); ?>
-<div class="container">
+<div class="container two-column">
   <div class="content-holder two-column">
     <?php
       $args = array(
@@ -35,5 +35,9 @@ get_header(); ?>
       wp_reset_query();
     ?>
   </div><!-- .content_holder -->
+  <aside class="two-column">
+    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Blog Sidebar") ) : ?>
+    <?php endif;?>
+  </aside>
 </div><!-- .container -->
 <?php get_footer(); ?>

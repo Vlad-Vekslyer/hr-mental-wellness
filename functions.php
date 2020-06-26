@@ -39,6 +39,11 @@ function hr_widgets_init() {
     'before_widget' => '<div class="modal-link">',
     'after_widget' => '</div>'
   ));
+
+  register_sidebar(array(
+    'name' => ' Blog Sidebar',
+    'id' => 'blod-sidebar'
+  ));
 }
 add_action( 'widgets_init', 'hr_widgets_init' );
 

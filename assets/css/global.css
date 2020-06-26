@@ -15,9 +15,10 @@ body {
 	font-family: 'Assistant', sans-serif;
 }
 
-body, html {
-	overflow-x: hidden;
-}
+body, html { overflow-x: hidden; }
+
+/* SIDEBAR */
+aside { list-style: none; }
 
 /* BLOCK QUOTES */
 blockquote {

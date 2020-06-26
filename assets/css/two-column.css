@@ -1,6 +1,15 @@
-.content-holder.two-column { width: 60%; margin: 50px 0; }
+.container.two-column {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
 
-.post-preview { }
+aside.two-column { width: 25%;}
+
+.content-holder.two-column { width: 70%; }
+
+.post-preview { margin-bottom: 30px; }
 .post-preview a { font-size: 1.1em; font-weight: 600;}
 .post-preview h2 { margin-bottom: 0; }
 .post-preview h5 { color: #656565; margin: 0; }
@@ -11,4 +20,4 @@
   align-items: center;
   margin-top: 15px;
 }
-.post-preview .bottom .categories { display: inline-flex; }
+.post-preview .bottom .categories { display: inline-flex; justify-content: center; }
