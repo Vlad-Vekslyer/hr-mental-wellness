@@ -12,7 +12,7 @@
 
 get_header(); ?>
 <div class="container">
-  <div class="content_holder full-width">
+  <div class="content-holder full-width">
     <?php the_post(); ?>
     <?php the_content(); ?>
   </div><!-- .content_holder -->

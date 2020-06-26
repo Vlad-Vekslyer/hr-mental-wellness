@@ -1,13 +1,10 @@
 <?php get_header(); ?>
 
 <div class="container">
-  <div class="content_holder">
-   <div class="widget-wrapper">
-     <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Top Wrap") ) : ?>
-     <?php endif;?>
-   </div>
-    <div class="clear"></div>
-  </div><!-- site-aligner -->
+  <div class="widget-wrapper">
+   <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Top Wrap") ) : ?>
+   <?php endif;?>
+  </div>
 </div><!-- content -->
 
 <section id="testimonials">

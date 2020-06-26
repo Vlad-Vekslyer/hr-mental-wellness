@@ -62,7 +62,7 @@ Text Domain: hr
 .btn a:hover { color: white; }
 
 /* Top and Bottom Widget Wrappers */
-.widget-wrapper { display: flex; justify-content: space-between; }
+.widget-wrapper { display: flex; justify-content: space-between; padding: 50px 0; }
 .widget-wrapper > div { width: 360px; }
 
 /* Top Page Hero */
@@ -92,8 +92,12 @@ Text Domain: hr
 /* container */
 .container { width: 80%; margin: 0 auto; }
 
-/* content_holder */
-.content_holder { padding: 50px 0; }
+/* content holder */
+.content-holder {
+	background-color: white;
+	box-shadow: 0 0 5px #eee;
+	padding: 40px;
+}
 
 /* layout based on two divs equally splitting the space */
 .two-modals { display: flex; background-color: white; }

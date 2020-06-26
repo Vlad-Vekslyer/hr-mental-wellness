@@ -1,7 +1,7 @@
 <?php
 get_header(); ?>
 <div class="container">
-  <div class="content_holder two-column">
+  <div class="content-holder two-column">
     <?php
       $args = array(
         'post_type' => 'post'
