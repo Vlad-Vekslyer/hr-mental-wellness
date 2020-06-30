@@ -24,8 +24,9 @@ add_filter('get_hero_desc', 'hero_desc');
 // @return the path to the appropriate image for the page
 function page_img(int $id) {
   $img_link = wp_get_attachment_url( get_post_thumbnail_id($id));
-  if($img_link)
+  if(!is_front_page() && $img_link){
     return $img_link;
+  }
   else
     // returns default image if no image was found specific for the page
     return get_theme_mod('hr_hero_image');
