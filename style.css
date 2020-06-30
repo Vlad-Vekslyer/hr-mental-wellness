@@ -17,6 +17,8 @@ Text Domain: hr
 @import url("assets/css/two-column.css");
 @import url("assets/css/service.css");
 
+.breadcrumbs { margin-bottom: 7.5px; }
+
 /* Modal Link Widget */
 .modal-link {
 	position: relative;

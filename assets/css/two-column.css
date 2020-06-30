@@ -5,7 +5,7 @@
   justify-content: space-between;
 }
 
-aside.two-column { width: 25%;}
+aside.two-column { width: 25%; margin-top: 55px; }
 
 .content-holder.two-column { width: 70%; }
 
