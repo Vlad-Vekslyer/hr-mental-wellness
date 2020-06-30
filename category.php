@@ -2,6 +2,11 @@
 get_header(); ?>
 <div class="container two-column">
   <div class="content-holder two-column">
+    <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+      <?php
+        if(function_exists('bcn_display')) { bcn_display(); }
+      ?>
+    </div>
     <?php
       $cat_slug = preg_replace('/[_\s]/i' , '-', single_cat_title('', false));
       $cat_slug = strtolower($cat_slug);
