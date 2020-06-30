@@ -94,6 +94,8 @@ function print_related_pages(WP_Query $query) {
 }
 add_action('related_pages', 'print_related_pages');
 
+// print the markup for a post preview when displaying multiple posts in one page
+// @query will contain the data of the posts
 function print_post_preview(WP_Query $query) {
   while($query->have_posts()) {
     $query->the_post();
