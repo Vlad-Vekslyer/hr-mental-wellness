@@ -126,6 +126,14 @@ function print_post_preview(WP_Query $query) {
 }
 add_action('post_preview', 'print_post_preview');
 
+function add_blog($trail) {
+  if(is_page('blog'))
+    array_pop($trail->breadcrumbs);
+  $link = get_site_url() . '/blog';
+  $trail->add(new bcn_breadcrumb('Blog', NULL, array('home'), $link, NULL, true));
+}
+add_action('bcn_after_fill', 'add_blog');
+
 // Import and register custom customization options
 require get_stylesheet_directory() . '/inc/customizer.php';
 // Import and register custom widgets
