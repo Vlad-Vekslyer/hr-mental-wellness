@@ -8,9 +8,11 @@ get_header(); ?>
       ?>
     </div>
     <?php
+      // the arguments to the query are determined by whether we're at the blog index of a category page
       if($post->post_name === 'blog') {
         $args = array('post_type' => 'post');
       } else {
+        // format the title of the category into a slug name for the query
         $cat_slug = preg_replace('/[_\s]/i' , '-', single_cat_title('', false));
         $cat_slug = strtolower($cat_slug);
         $args = array(
