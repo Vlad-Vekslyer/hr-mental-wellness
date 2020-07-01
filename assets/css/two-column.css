@@ -1,11 +1,11 @@
+aside.two-column { width: 25%; margin-top: 55px; }
+
 .container.two-column {
   display: flex;
   margin-top: 50px;
   margin-bottom: 50px;
   justify-content: space-between;
 }
-
-aside.two-column { width: 25%; margin-top: 55px; }
 
 .content-holder.two-column { width: 70%; }
 
@@ -21,3 +21,19 @@ aside.two-column { width: 25%; margin-top: 55px; }
   margin-top: 15px;
 }
 .post-preview .bottom .categories { display: inline-flex; justify-content: center; }
+
+@media only screen and (max-width: 825px) {
+  aside.two-column { margin: 0; padding: 20px 30px; width: 100%; }
+
+  .container.two-column { flex-direction: column-reverse; margin-top: 0; }
+
+  .content-holder.two-column { width: 100%; padding: 20px 30px; }
+
+  .post-preview .bottom .categories { display: none; }
+}
+
+@media only screen and (max-width: 550px) {
+  .post-preview a { font-size: 1em; }
+
+  .content-holder.two-column, aside.two-column { padding: 20px; }
+}

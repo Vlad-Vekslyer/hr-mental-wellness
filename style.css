@@ -19,6 +19,8 @@ Text Domain: hr
 
 .breadcrumbs { margin-bottom: 10px; }
 
+.pagination { display: flex; justify-content: space-between; }
+
 /* Modal Link Widget */
 .modal-link {
 	position: relative;
