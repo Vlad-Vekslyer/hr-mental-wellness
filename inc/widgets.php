@@ -2,11 +2,6 @@
 
 class HR_Video extends WP_Widget {
 
-  public $args = array(
-    'before_widget' => '<div class="video">',
-    'after_widget' => '</div'
-  );
-
   public function __construct() {
     parent::__construct( 'hr_media_video', 'HR Video', array(
         'description' => 'Displays a video by providing a youtube link.'
@@ -16,17 +11,17 @@ class HR_Video extends WP_Widget {
     });
   }
 
-  public function widget( $args, $instance ) {
+  public function widget($args, $instance) {
       $header = esc_html($instance['header']);
       $body = esc_html($instance['body']);
       $link = esc_html($instance['link']);
 
       ?>
-      <?= $args['before_widget']; ?>
-      <h4><?= $header ?></h4>
-      <iframe src="<?= $link ?>"></iframe>
-      <p><?= $body ?></p>
-      <?= $args['after_widget']; ?>
+        <?= $args['before_widget'] ?>
+        <iframe src="<?= $link ?>"></iframe>
+        <h4><?= $header ?></h4>
+        <p><?= $body ?></p>
+        <?= $args['after_widget']; ?>
       <?php
   }
 

@@ -48,7 +48,9 @@ function hr_widgets_init() {
 
   register_sidebar(array(
     'name' => 'Videos',
-    'id' => 'videos'
+    'id' => 'videos',
+    'before_widget' => '<div class="video-post">',
+    'after_widget' => '</div>'
   ));
 }
 add_action( 'widgets_init', 'hr_widgets_init' );
