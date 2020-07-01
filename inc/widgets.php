@@ -19,8 +19,10 @@ class HR_Video extends WP_Widget {
       ?>
         <?= $args['before_widget'] ?>
         <iframe src="<?= $link ?>"></iframe>
-        <h4><?= $header ?></h4>
-        <p><?= $body ?></p>
+        <div class="text">
+          <h4><?= $header ?></h4>
+          <p><?= $body ?></p>
+        </div>
         <?= $args['after_widget']; ?>
       <?php
   }

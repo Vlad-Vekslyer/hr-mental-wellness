@@ -1,6 +1,10 @@
 .content-holder.full-width { margin: 50px 150px; }
 .content-holder.full-width p { margin-bottom: 15px; }
 
+.video-post { display: flex; justify-content: space-between; }
+.video-post > div { width: 47.5%; padding: 0 10px; }
+.video-post > iframe { height: 300px; width: 47.5%; }
+
 #bottom-bar > h2 { text-align: center; color: var(--blue-dark); }
 #bottom-bar .pages { display: flex; justify-content: center; margin: 30px 0; }
 #bottom-bar .page {
