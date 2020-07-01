@@ -112,7 +112,7 @@ function print_post_preview(WP_Query $query) {
 
     <div class="post-preview">
       <h2><?= the_title(); ?></h2>
-      <h5><?= the_date("M d, Y"); ?></h5>
+      <h5><?= get_the_date("M d, Y"); ?></h5>
       <p><?= substr(get_the_content(), 0, 300); ?>...</p>
       <div class="bottom">
         <a href=<?= the_permalink(); ?>>Read More</a>
@@ -130,7 +130,6 @@ function print_post_preview(WP_Query $query) {
 
     <?php
   }
-  wp_reset_query();
 }
 add_action('post_preview', 'print_post_preview');
 
