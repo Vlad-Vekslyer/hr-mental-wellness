@@ -2,11 +2,11 @@
 get_header(); ?>
 <div class="container two-column">
   <div class="content-holder two-column">
-    <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <nav class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
       <?php
         if(function_exists('bcn_display')) { bcn_display(); }
       ?>
-    </div>
+    </nav>
     <?php
       $args = array();
       // some of the arguments to the query are determined by whether we're at the blog index of a category page
@@ -25,14 +25,17 @@ get_header(); ?>
       $query = new WP_Query($args);
       // 'hack' that allowss post_nav_link to work
       global $wp_query;
-      // Put default query object in a temp variable
       $tmp_query = $wp_query;
-      // Now wipe it out completely
       $wp_query = null;
       // Re-populate the global with our custom query
       $wp_query = $query;
       do_action('post_preview', $query);
-      posts_nav_link();
+    ?>
+      <nav class="pagination">
+        <span><?= previous_posts_link(); ?></span>
+        <span><?= next_posts_link(); ?></span>
+      </nav>
+    <?php
       wp_reset_query();
     ?>
   </div><!-- .content_holder -->
