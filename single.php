@@ -4,7 +4,7 @@ get_header(); ?>
   <div class="content-holder two-column">
     <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
       <?php
-        if(function_exists('bcn_display')) { bcn_display(false, true, false, true); }
+        if(function_exists('bcn_display')) { bcn_display(); }
       ?>
     </div>
     <h2><?= the_title(); ?></h2>

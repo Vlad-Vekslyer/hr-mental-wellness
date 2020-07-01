@@ -42,8 +42,13 @@ function hr_widgets_init() {
   ));
 
   register_sidebar(array(
-    'name' => ' Blog Sidebar',
-    'id' => 'blod-sidebar'
+    'name' => 'Blog Sidebar',
+    'id' => 'blog-sidebar'
+  ));
+
+  register_sidebar(array(
+    'name' => 'Videos',
+    'id' => 'videos'
   ));
 }
 add_action( 'widgets_init', 'hr_widgets_init' );
