@@ -17,9 +17,6 @@ body {
 
 body, html { overflow-x: hidden; }
 
-/* SIDEBAR */
-aside { list-style: none; }
-
 /* BLOCK QUOTES */
 blockquote {
 	margin: 0;
@@ -30,6 +27,7 @@ blockquote cite { display: inline-block; margin-top: 5px; }
 
 /* LISTS */
 ul { padding: 0; list-style: none; margin: 0; }
+li { list-style: none; }
 
 /* HEADERS */
 h1, h2, h3, h4, h5 , h6 {
