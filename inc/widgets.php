@@ -9,7 +9,7 @@ class HR_Video extends WP_Widget {
 
   public function __construct() {
     parent::__construct( 'hr_media_video', 'HR Video', array(
-        'description' => 'Displays a video by providing youtube link.'
+        'description' => 'Displays a video by providing a youtube link.'
     ));
     add_action('widgets_init', function() {
       register_widget('HR_Video');
@@ -42,7 +42,7 @@ class HR_Video extends WP_Widget {
     </p>
     <p>
       <label for="<?= $this->get_field_id( 'body' ); ?>">Body:</label>
-      <input class="widefat" id="<?= $this->get_field_id( 'body' ); ?>" name="<?= $this->get_field_name( 'body' ); ?>" type="text" value="<?= esc_attr( $body ); ?>" />
+      <textarea class="widefat" id="<?= $this->get_field_id( 'body' ); ?>" name="<?= $this->get_field_name( 'body' ); ?>"><?= esc_attr( $body ); ?></textarea>
     </p>
     <p>
       <label for="<?= $this->get_field_id( 'link' ); ?>">Youtube Link:</label>
@@ -102,7 +102,7 @@ class Link_Modal extends WP_Widget {
       </p>
       <p>
         <label for="<?= $this->get_field_id( 'body' ); ?>">Body:</label>
-        <input class="widefat" id="<?= $this->get_field_id( 'body' ); ?>" name="<?= $this->get_field_name( 'body' ); ?>" type="text" value="<?= esc_attr( $body ); ?>" />
+        <textarea class="widefat" id="<?= $this->get_field_id( 'body' ); ?>" name="<?= $this->get_field_name( 'body' ); ?>"><?= esc_attr( $body ); ?></textarea>
       </p>
       <p>
         <label for="<?= $this->get_field_id( 'link' ); ?>">Link:</label>

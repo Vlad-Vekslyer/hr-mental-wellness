@@ -13,11 +13,12 @@
 get_header(); ?>
 <div class="container">
   <div class="content-holder full-width">
-    <?php the_post(); ?>
-    <?php the_content(); ?>
     <?php
       if($post->post_name === 'videos') {
         if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Videos") ) : endif;
+      } else {
+        the_post();
+        the_content();
       }
     ?>
   </div><!-- .content_holder -->
