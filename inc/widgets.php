@@ -18,7 +18,7 @@ class HR_Video extends WP_Widget {
 
       ?>
         <?= $args['before_widget'] ?>
-        <iframe src="<?= $link ?>"></iframe>
+        <iframe allow="fullscreen" src="<?= $link ?>"></iframe>
         <div class="text">
           <h4><?= $header ?></h4>
           <p><?= $body ?></p>
