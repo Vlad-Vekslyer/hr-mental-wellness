@@ -2,6 +2,10 @@
 get_header(); ?>
 <div class="container two-column">
   <div class="content-holder two-column">
+    <?php
+      the_post();
+      the_content();
+    ?>
   </div><!-- .content_holder -->
   <aside class="two-column">
     <div id="contact-sidebar">

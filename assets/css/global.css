@@ -54,11 +54,9 @@ button {
 button:hover { cursor: pointer; }
 
 /* FORMS */
-input {
-	font-family: 'Assistant', sans-serif;
-	padding: 5px;
-	border: none;
-}
+label { font-size: 1.2em; }
+input { font-size: 1em; }
+input, textarea { font-family: 'Assistant', sans-serif; padding: 5px; }
 
 /* LINKS */
 a { text-decoration: none; color: var(--blue-dark); }
