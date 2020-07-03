@@ -54,7 +54,7 @@ button {
 button:hover { cursor: pointer; }
 
 /* FORMS */
-label { font-size: 1.2em; }
+label { font-size: 1.1em; }
 input { font-size: 1em; }
 input, textarea { font-family: 'Assistant', sans-serif; padding: 5px; }
 

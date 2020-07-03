@@ -1,3 +1,7 @@
+.wpcf7 form > p:first-of-type { margin-right: 3%; }
+.wpcf7 form > p:first-of-type, .wpcf7 form > p:nth-of-type(2) { width: 48%; display: inline-block; }
+.wpcf7 form > p:first-of-type input, .wpcf7 form > p:nth-of-type(2) input { width: 100%; }
+.wpcf7 label { margin-bottom: 5px; }
 .wpcf7 input { margin-bottom: 7.5px; }
 .wpcf7 textarea { width: 100%; height: 150px; margin-bottom: 7.5px; }
 .wpcf7 input[type="submit"] {
