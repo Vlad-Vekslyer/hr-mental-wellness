@@ -36,7 +36,7 @@ function hr_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting('address', array(
+	$wp_customize->add_setting('street', array(
 		'type' => 'theme_mod',
 		'default' => ''
 	));
@@ -44,9 +44,25 @@ function hr_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'address',
+			'street',
 			array(
-				'label' => 'Address',
+				'label' => 'Street',
+				'section' => 'contact_info'
+			)
+		)
+	);
+
+	$wp_customize->add_setting('postal_code', array(
+		'type' => 'theme_mod',
+		'default' => ''
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'postal_code',
+			array(
+				'label' => 'Postal Code',
 				'section' => 'contact_info'
 			)
 		)

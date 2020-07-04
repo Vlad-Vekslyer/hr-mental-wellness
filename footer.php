@@ -14,7 +14,7 @@
       </div>
       <div class="contact">
         <h4>Contact Us</h4>
-        <p><img src="<?= get_stylesheet_directory_uri() ?>/assets/icons/map-marker-alt-solid.svg"><?= get_theme_mod('address'); ?></p>
+        <p><img src="<?= get_stylesheet_directory_uri() ?>/assets/icons/map-marker-alt-solid.svg"><?= get_theme_mod('street'); ?></p>
         <p><img src="<?= get_stylesheet_directory_uri() ?>/assets/icons/phone-solid.svg"><?= get_theme_mod('phone'); ?></p>
         <p>
           <img src="<?= get_stylesheet_directory_uri() ?>/assets/icons/envelope-regular.svg">
