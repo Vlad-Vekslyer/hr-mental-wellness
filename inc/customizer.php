@@ -68,6 +68,23 @@ function hr_customize_register( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting('google_maps_embed', array(
+		'type' => 'theme_mod',
+		'default' => ''
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'google_maps_embed',
+			array(
+				'label' => 'Google Maps Embed',
+				'section' => 'contact_info',
+				'description' => 'Enter the HTML embed link that points to the centre address in google maps'
+			)
+		)
+	);
+
 	//Homepage Options
 	$wp_customize->add_section('hr_homepage', array(
 		'title' => 'Homepage Options',
