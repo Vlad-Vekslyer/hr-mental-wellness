@@ -10,13 +10,15 @@
 <section id="testimonials">
   <h1>Testimonials</h1>
   <div class="container">
-    <?php
-      $query = new WP_Query(array(
-        'pagename' => 'testimonials'
-      ));
-      $query->the_post();
-      the_content();
-    ?>
+    <div class="slider">
+      <?php
+        $query = new WP_Query(array(
+          'pagename' => 'testimonials'
+        ));
+        $query->the_post();
+        the_content();
+      ?>
+    </div>
   </div>
 </section>
 

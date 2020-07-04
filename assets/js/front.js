@@ -12,8 +12,14 @@ function splitToDivs(elements, limit) {
   return splitDivs;
 }
 
-const quoteElements = document.querySelectorAll('#testimonials blockquote');
-const container = document.querySelector('#testimonials .container');
-container.innerHTML = '';
+function addClasses(elements) {
+  elements[0].classList.add('active');
+  if(elements[1]) elements[1].classList.add('next');
+}
 
-console.log(splitToDivs(quoteElements, 4));
+const quoteElements = document.querySelectorAll('#testimonials blockquote');
+const slider = document.querySelector('#testimonials .slider');
+slider.innerHTML = '';
+const splitQuotes = splitToDivs(quoteElements, 4);
+addClasses(splitQuotes);
+splitQuotes.forEach(div => slider.appendChild(div));
