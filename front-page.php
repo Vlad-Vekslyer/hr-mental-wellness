@@ -20,6 +20,8 @@
       ?>
     </div>
   </div>
+  <button id="prev">Prev</button>
+  <button id="next">Next</button>
 </section>
 
 <section class="two-modals">
