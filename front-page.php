@@ -49,4 +49,6 @@
   </div>
 </section>
 
+<script src="<?= get_stylesheet_directory_uri() ?>/assets/js/front.js"></script>
+
 <?php get_footer(); ?>
