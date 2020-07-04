@@ -8,33 +8,33 @@ get_header(); ?>
       ?>
     </nav>
     <?php
-      $args = array();
-      // some of the arguments to the query are determined by whether we're at the blog index of a category page
+      $query_args = array();
+      // the blog page shows all posts and doesn't need a category_name arg for its query
       if($post->post_name !== 'blog') {
         // format the title of the category into a slug name for the query
         $cat_slug = preg_replace('/[_\s]/i' , '-', single_cat_title('', false));
         $cat_slug = strtolower($cat_slug);
-        $args = array('category_name' => $cat_slug);
+        $query_args = array('category_name' => $cat_slug);
       }
       $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-      $args = array_merge($args, array(
+      $query_args = array_merge($query_args, array(
         'post_type' => 'post',
         'posts_per_page' => 5,
         'paged' => $paged
       ));
-      $query = new WP_Query($args);
-      // 'hack' that allowss post_nav_link to work
+      $query = new WP_Query($query_args);
+      // 'hack' that allowss post_nav_link to work by setting wp_query to our custom query
       global $wp_query;
       $tmp_query = $wp_query;
       $wp_query = null;
-      // Re-populate the global with our custom query
       $wp_query = $query;
+      // generate post preview markup
       do_action('post_preview', $query);
     ?>
-      <nav class="pagination">
-        <span><?= previous_posts_link(); ?></span>
-        <span><?= next_posts_link(); ?></span>
-      </nav>
+    <nav class="pagination">
+      <span><?= previous_posts_link(); ?></span>
+      <span><?= next_posts_link(); ?></span>
+    </nav>
     <?php
       wp_reset_query();
     ?>
