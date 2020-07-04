@@ -33,7 +33,7 @@
 	z-index: -1;
 }
 #testimonials h1 { text-align: center; margin-bottom: 40px;}
-#testimonials .quote { width: 40%; margin-bottom: 10px;}
+#testimonials blockquote { width: 40%; margin-bottom: 10px;}
 #testimonials .container {
 	display: flex;
 	flex-wrap: wrap;

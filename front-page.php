@@ -10,22 +10,13 @@
 <section id="testimonials">
   <h1>Testimonials</h1>
   <div class="container">
-    <div class="quote">
-      <p>“I really appreciated the freedom we had to share our stories. It was very useful and helpful – I was inspired by the stories of strength and challenges – There were so many different situations, but we have a common thread. You always ensure everyone gets a full chance to tell their stories.”</p>
-      <p>-Maurine K</p>
-    </div>
-    <div class="quote">
-      <p>"I felt so wonderful to help and get help from other members of the group through sharing my experiences and what has helped me. Attending the group meeting made me committed to do that"</p>
-      <p>-Rebecca J</p>
-    </div>
-    <div class="quote">
-      <p>"From the first session, I knew that I will be able to heal from depression and anxiety. Along the way, I knew that my depression and anxiety will be gone."</p>
-      <p>-Eric L</p>
-    </div>
-    <div class="quote">
-      <p>"I appreciated the way you run the coaching session. It is so effective and always gives me much more than I expect."</p>
-      <p>-Chris Y</p>
-    </div>
+    <?php
+      $query = new WP_Query(array(
+        'pagename' => 'testimonials'
+      ));
+      $query->the_post();
+      the_content();
+    ?>
   </div>
 </section>
 
