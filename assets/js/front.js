@@ -44,6 +44,8 @@ splitQuotes.forEach(div => slider.appendChild(div));
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
 
+if(splitQuotes.length < 3) prevBtn.disabled = true;
+
 nextBtn.addEventListener('click', () => {
   const active = document.querySelector('div.active');
   const next = document.querySelector('div.next');
