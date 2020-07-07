@@ -22,19 +22,19 @@ function splitToDivs(elements, limit) {
 
 // sets the class of all elements in a slider depending on which element is the active element
 function setClasses(activeElem, allElems) {
-  const activeNum = activeElem.id.slice(-1);
+  const activeNum = parseInt(activeElem.id.slice(-1));
+  // remove next and prev class from all elements
   allElems.forEach(elem => {
     const elemId = elem.id.slice(-1);
-    if(elem.id !== activeNum) {
-      elem.classList.remove('next');
-      elem.classList.remove('prev');
-    }
+    elem.classList.remove('next');
+    elem.classList.remove('prev');
   });
-  if(activeNum == 0) {
-    allElems[1].classList.add('next');
-  } else if(!allElems[activeNum + 1]) {
+  if(activeNum === 0) allElems[1].classList.add('next');
+  else if(!allElems[activeNum + 1]) {
     allElems[0].classList.add('next');
-  } else {
+    allElems[activeNum -1].classList.add('prev');
+  }
+  else {
     allElems[activeNum - 1].classList.add('prev');
     allElems[activeNum + 1].classList.add('next');
   }
