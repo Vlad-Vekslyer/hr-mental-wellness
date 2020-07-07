@@ -34,6 +34,9 @@
 }
 #testimonials h1 { text-align: center; margin-bottom: 40px;}
 #testimonials blockquote { width: 40%; margin-bottom: 10px;}
+#testimonials .interface { display: flex; justify-content: space-between; }
+#testimonials .interface .btn { color: white; text-transform: none; padding: 5px 15px; }
+#testimonials .interface .btn:disabled { opacity: 0.5; }
 #testimonials .container { overflow: hidden; }
 #testimonials .slider { position: relative; }
 #testimonials .slider > div {

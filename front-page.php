@@ -19,10 +19,10 @@
         the_content();
       ?>
     </div>
-  </div>
-  <div class="interface">
-    <button id="prev">Prev</button>
-    <button id="next">Next</button>
+    <div class="interface">
+      <button class="btn" id="prev">Prev</button>
+      <button class="btn" id="next">Next</button>
+    </div>
   </div>
 </section>
 
