@@ -49,6 +49,7 @@ function getHandler(type) {
     active.classList.add(type === 'next' ? 'prev' : 'next');
     inactive.classList.remove(type);
     inactive.classList.add('active');
+    if(splitQuotes.length >= 3) { prevBtn.disabled = inactive.id === 'slide-0'; }
     setTimeout(() => setClasses(inactive, splitQuotes), 500);
   }
 }
@@ -80,9 +81,7 @@ splitQuotes.forEach(div => slider.appendChild(div));
 
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
-
-if(splitQuotes.length < 3) prevBtn.disabled = true;
-
+prevBtn.disabled = true;
 nextBtn.addEventListener('click', getHandler('next'));
 prevBtn.addEventListener('click', getHandler('prev'));
 
