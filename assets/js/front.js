@@ -50,7 +50,7 @@ function getHandler(type) {
     inactive.classList.remove(type);
     inactive.classList.add('active');
     if(splitQuotes.length >= 3) { prevBtn.disabled = inactive.id === 'slide-0'; }
-    setTimeout(() => setClasses(inactive, splitQuotes), 500);
+    setClasses(inactive, splitQuotes);
   }
 }
 
