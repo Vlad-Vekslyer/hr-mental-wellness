@@ -1,3 +1,6 @@
+// splits an HTML collection into groups of elements in separate divs
+// @elements is the HTML collection
+// @limit is the max number of elemnts per group
 function splitToDivs(elements, limit) {
   const splitDivs = Array.from(elements).reduce((acc, element, idx) => {
     if(idx % limit === 0 || idx === 0) {
@@ -13,6 +16,7 @@ function splitToDivs(elements, limit) {
   return splitDivs;
 }
 
+// sets the class of all elements in a slider depending on which element is the active element
 function setClasses(activeElem, allElems) {
   const activeNum = activeElem.id.slice(-1);
   allElems.forEach(elem => {
@@ -32,6 +36,19 @@ function setClasses(activeElem, allElems) {
   }
 }
 
+// HOF that returns the click handler for the control buttons in the slider
+function getHandler(type) {
+  return () => {
+    const active = document.querySelector('div.active');
+    const inactive = document.querySelector(`div.${type}`);
+    active.classList.remove('active');
+    active.classList.add(type === 'next' ? 'prev' : 'next');
+    inactive.classList.remove(type);
+    inactive.classList.add('active');
+    setTimeout(() => setClasses(inactive, splitQuotes), 500);
+  }
+}
+
 const quoteElements = document.querySelectorAll('#testimonials blockquote');
 const slider = document.querySelector('#testimonials .slider');
 slider.innerHTML = '';
@@ -46,22 +63,5 @@ const prevBtn = document.getElementById('prev');
 
 if(splitQuotes.length < 3) prevBtn.disabled = true;
 
-nextBtn.addEventListener('click', () => {
-  const active = document.querySelector('div.active');
-  const next = document.querySelector('div.next');
-  active.classList.remove('active');
-  active.classList.add('prev');
-  next.classList.remove('next');
-  next.classList.add('active');
-  setTimeout(() => setClasses(next, splitQuotes), 500);
-});
-
-prevBtn.addEventListener('click', () => {
-  const active = document.querySelector('div.active');
-  const prev = document.querySelector('div.next');
-  active.classList.remove('active');
-  active.classList.add('next');
-  prev.classList.remove('prev');
-  prev.classList.add('active');
-  setTimeout(() => setClasses(prev, splitQuotes), 500);
-});
+nextBtn.addEventListener('click', getHandler('next'));
+prevBtn.addEventListener('click', getHandler('prev'));
