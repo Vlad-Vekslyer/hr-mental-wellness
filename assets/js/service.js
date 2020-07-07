@@ -1,3 +1,7 @@
+// ************************
+// FUNCTIONS
+// ************************
+
 // gets text inside of an element's children
 // @element is the element that is being searched for text
 // @tag specifies what type of child elements should the text be retreived from
@@ -88,6 +92,9 @@ function removeByHeader(element, tag, header) {
   return response;
 }
 
+// ************************
+// SETUP CODE
+// ************************
 const content = document.getElementById('content');
 const testimonialElems = removeByHeader(content, 'h4', 'Testimonials');
 const headers = getTextByTags(content, 'h4');

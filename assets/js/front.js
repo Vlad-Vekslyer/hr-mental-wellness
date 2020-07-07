@@ -1,3 +1,7 @@
+// ************************
+// FUNCTIONS
+// ************************
+
 // splits an HTML collection into groups of elements in separate divs
 // @elements is the HTML collection
 // @limit is the max number of elemnts per group
@@ -5,7 +9,7 @@ function splitToDivs(elements, limit) {
   const splitDivs = Array.from(elements).reduce((acc, element, idx) => {
     if(idx % limit === 0 || idx === 0) {
       const div = document.createElement('DIV');
-      div.id = `slider-${acc.length}`
+      div.id = `slide-${acc.length}`
       div.appendChild(element);
       return [...acc, div];
     } else {
@@ -49,6 +53,22 @@ function getHandler(type) {
   }
 }
 
+// returns the element with the largest height in an array of elements
+function getHighestElem(elements) {
+  const highestElem = elements.reduce((acc, elem) => {
+      const maxHeight = acc.getBoundingClientRect().height;
+      const currentHeight = elem.getBoundingClientRect().height;
+      return maxHeight >= currentHeight ? acc : elem;
+  });
+  return {
+    element: highestElem,
+    height: highestElem.getBoundingClientRect().height
+  };
+}
+
+// ************************
+// SETUP CODE
+// ************************
 const quoteElements = document.querySelectorAll('#testimonials blockquote');
 const slider = document.querySelector('#testimonials .slider');
 slider.innerHTML = '';
@@ -65,3 +85,8 @@ if(splitQuotes.length < 3) prevBtn.disabled = true;
 
 nextBtn.addEventListener('click', getHandler('next'));
 prevBtn.addEventListener('click', getHandler('prev'));
+
+// set the slider's height to be the height of the highest slide
+const maxHeight = getHighestElem(splitQuotes).height;
+slider.style.height = maxHeight;
+slider.setAttribute('style', `height: ${maxHeight}px`);
